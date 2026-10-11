@@ -1,0 +1,4 @@
+# Дополнительные исключения при загрузке сайта по FTP.
+# Примеры:
+# assets/drafts/
+# books/old-version.html
