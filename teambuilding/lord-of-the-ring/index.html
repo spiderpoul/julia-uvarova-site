@@ -206,6 +206,28 @@ footer{background:#051b24;color:#94ada9;padding:25px 0 31px;font-size:13px}.foot
 .characters-section .ribbon{flex-direction:column;align-items:flex-start;gap:10px}
 .result-card{padding:18px}.result-card b{font-size:18px}
 }
+
+/* Author section: personal portrait first, speaking gallery below */
+.host-section-shell{display:block}
+.host-intro{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);align-items:center;gap:clamp(28px,5vw,64px)}
+.host-intro .host-copy{min-width:0}
+.host-portrait{margin:0;align-self:stretch;min-width:0;overflow:hidden;border-radius:24px;background:#dbece7;border:7px solid #fffdf7;box-shadow:0 18px 55px #073b4a20}
+.host-portrait img{display:block;width:100%;height:100%;min-height:420px;max-height:530px;aspect-ratio:4/5;object-fit:cover;object-position:center 24%}
+.host-section-shell .host-gallery{margin:52px auto 0;width:100%;max-width:860px;min-width:0}
+.host-section-shell .host-gallery-label{text-align:center;font-size:15px;color:#426c6b;margin-bottom:17px}
+.host-section-shell .live-stage{background:#fffefb}
+@media(max-width:900px){
+ .host-intro{grid-template-columns:minmax(0,1fr) minmax(245px,.77fr);gap:26px}
+ .host-portrait img{min-height:360px;max-height:450px}
+ .host-section-shell .host-gallery{margin-top:36px}
+}
+@media(max-width:650px){
+ .host-intro{grid-template-columns:minmax(0,1fr);gap:22px}
+ .host-portrait{width:100%;max-width:425px;margin:0 auto}
+ .host-portrait img{height:auto;min-height:0;max-height:520px;aspect-ratio:4/5}
+ .host-section-shell .host-gallery{margin-top:30px}
+ .host-section-shell .host-gallery-label{text-align:left;font-size:14px}
+}
 </style></head><body>
 <header><nav class="w nav"><a class="brand" href="#top"><i aria-hidden="true"></i><span>ДЕБАГ КОМАНДЫ<small>Игровой сценарий «Кольцо раздора»</small></span></a><div class="links"><a href="#benefits">Для команды</a><a href="#how">Как проходит</a><a href="#quests">Испытания</a><a href="#characters">Герои</a><a href="#host">Ведущая</a></div><a class="btn top-btn" href="https://t.me/julia_uvarova_psy" target="_blank" rel="noopener noreferrer">Обсудить тимбилдинг ↗</a></nav></header>
 <main id="top"><section class="hero"><div class="w hero-inner"><div class="hero-content">
@@ -233,7 +255,7 @@ footer{background:#051b24;color:#94ada9;padding:25px 0 31px;font-size:13px}.foot
 </div><div class="value-foot"><strong>Здесь не ставят диагноз команде и не ищут виноватых.</strong> Игровые решения дают повод заметить привычки взаимодействия и обсудить их в безопасной форме.</div>
 </div></section>
 <section class="section how-section" id="how"><div class="w how-layout">
-<div class="how-copy"><div class="eyebrow">Вот откуда берутся эльфы и орки</div><h2 class="serif">Знакомые IT-ситуации. <span style="color:var(--p)">Необычные декорации.</span></h2>
+<div class="how-copy"><div class="eyebrow">Как устроен игровой сценарий</div><h2 class="serif">Знакомые IT-ситуации. <span style="color:var(--p)">Необычные декорации.</span></h2>
 <p>Вместо разработчиков, тестировщиков и менеджеров — эльфы, гномы, люди и хоббиты. Вместо сложного заказчика — несговорчивый орк. Но внутри приключения всё по-настоящему: разные цели, неполная информация, ограниченные ресурсы и необходимость договориться.</p>
 <p class="how-highlight">Фэнтезийный сюжет помогает посмотреть на привычные проблемы со стороны. Прежде всего это весёлая командная игра, а не экзамен на soft skills.</p>
 <div class="how-disclaimer">Никаких тестов на 100 вопросов и обязательного «расскажите о своих чувствах».</div></div>
@@ -246,8 +268,7 @@ footer{background:#051b24;color:#94ada9;padding:25px 0 31px;font-size:13px}.foot
 <article class="level"><div class="level-photo"><img loading="lazy" src="assets/rivendell-council.webp" alt="Эльфийский город в горах"><span>ГЛАВА I · РИВЕНДЕЛЛ</span></div><div class="level-body"><h3>Все правы. Решение не принято</h3><p>Эльфы, гномы и люди спорят, как нести Кольцо. У каждого — своя часть карты и веские доводы. Выберите путь, прежде чем враг отрежет дороги.</p><small>Переговоры · Аргументация · Совместное решение</small></div></article>
 <article class="level"><div class="level-photo"><img loading="lazy" src="assets/moria-bridge.webp" alt="Разрушенный мост Мории"><span>ГЛАВА II · МОРИЯ</span></div><div class="level-body"><h3>Сроки горят. Эксперт недоступен.</h3><p>Семь камней времени, одна пропасть и десяток срочных задач. Восстановите переход, распределите роли и придумайте запасной план.</p><small>Приоритеты · Делегирование · Гибкость</small></div></article>
 <article class="level"><div class="level-photo"><img loading="lazy" src="assets/mordor-gate.webp" alt="Чёрные врата Мордора"><span>ГЛАВА III · МОРДОР</span></div><div class="level-body"><h3>Переговоры зашли в тупик</h3><p>Гракх не верит обещаниям, выдвигает нелепые условия и грозится закрыть ворота. Выясните, чего он хочет, и договоритесь, не сдавая своих.</p><small>Сложные переговоры · Границы · Работа с конфликтом</small></div></article>
-</div></div></section><section class="section sample-demo" id="demo"><div class="w"><div class="demo"><div><div class="eyebrow">Попробуйте принять решение</div><h3>Братство, куда отправимся?</h3><p>Перед вами фрагмент одного из испытаний. Изучите сведения, выберите действие и посмотрите, как изменится ситуация.</p><div class="demo-info"><b>Что известно</b><p>Эльфы предупреждают о буре в горах. Гномы знают вход в Морию, но давно его не проверяли. Через лес можно пройти только с разрешения хранителей.</p></div></div><div class="demo-panel"><b class="demo-hint">СОВЕТ В РИВЕНДЕЛЛЕ · ВАШ ХОД</b><div class="route-btns"><button type="button" data-route="a" aria-pressed="false">Идти через горы</button><button type="button" data-route="b" aria-pressed="false">Проверить Морию</button><button type="button" data-route="c" aria-pressed="false">Договориться с хранителями леса</button></div><p id="out" aria-live="polite">Выберите действие, чтобы увидеть его последствия.</p></div></div></div></section>
-<section class="section characters-section" id="characters"><div class="w">
+</div></div></section><section class="section characters-section" id="characters"><div class="w">
 <div class="eyebrow">Игровые роли с узнаваемыми характерами</div>
 <h2 class="serif">Кого узнаёте?</h2>
 <p class="characters-intro">Эльфы, гномы, люди, хоббиты и орки — не просто красивые картинки. У каждого народа свой взгляд на задачу и особая возможность в игре. Игрокам нужно услышать других, чтобы Братство добралось до цели.</p>
@@ -271,7 +292,7 @@ footer{background:#051b24;color:#94ada9;padding:25px 0 31px;font-size:13px}.foot
 <article><strong>Поиграем вместе</strong><p>Онлайн участники обсуждают решения в отдельных комнатах; офлайн — в небольших группах. Затем возвращаются к общей истории и узнают последствия своего выбора.</p></article>
 <article><strong>Подведём игровые итоги</strong><p>Юлия ведёт историю, объясняет правила и помогает разобрать решения команды — без обязательных личных откровений.</p></article>
 </div></div></section>
-<section class="section about" id="host"><div class="w about-grid"><div class="host-copy"><div class="eyebrow">Кто проводит</div><h2 class="serif">Свой человек<br><span style="color:var(--p)">из IT.</span></h2><p>Я Юлия Уварова, IT-психолог. <strong>9 лет работала в разработке</strong> и 11 лет занимаюсь психологией.</p><p>В основе игры — узнаваемые ситуации из IT и задания, в которых участникам приходится применять конкретные навыки: договариваться, аргументировать, распределять ответственность и принимать решения вместе.</p><div class="host-facts"><p><strong>Спикер IT-конференций:</strong> Стачка, Merge, Summer Merge, HolyJS, MoscowJS, КаргоКульт, Selectel Day Off, Импульс.</p><p><strong>Член программного комитета</strong> конференции «Импульс».</p><p><strong>Автор книги</strong> «Дебаг выгорания» и подкаста «Дебаг карьеры».</p></div></div><div class="host-gallery"><div class="host-gallery-label">Юлия на IT-конференциях и мероприятиях</div><div class="live-slider" data-slider="speaking"><div class="live-stage"><div class="live-slides"><figure class="live-slide" id="live-photo-1" data-index="0"><img src="data:image/webp;base64,UklGRny6AQBXRUJQVlA4IHC6AQDQvQidASoABVUDPpFAmkmlo6ivJ9LsyeAS
+<section class="section about" id="host"><div class="w host-section-shell"><div class="host-intro"><div class="host-copy"><div class="eyebrow">Кто проводит</div><h2 class="serif">Свой человек<br><span style="color:var(--p)">из IT.</span></h2><p>Я Юлия Уварова, IT-психолог. <strong>9 лет работала в разработке</strong> и 11 лет занимаюсь психологией.</p><p>В основе игры — узнаваемые ситуации из IT и задания, в которых участникам приходится применять конкретные навыки: договариваться, аргументировать, распределять ответственность и принимать решения вместе.</p><div class="host-facts"><p><strong>Спикер IT-конференций:</strong> Стачка, Merge, Summer Merge, HolyJS, MoscowJS, КаргоКульт, Selectel Day Off, Импульс.</p><p><strong>Член программного комитета</strong> конференции «Импульс».</p><p><strong>Автор книги</strong> «Дебаг выгорания» и подкаста «Дебаг карьеры».</p></div></div><figure class="host-portrait"><img src="../../trainings/teamlead/assets/image-01.jpg" alt="Юлия Уварова — IT-психолог и ведущая игрового тимбилдинга" loading="lazy" decoding="async"></figure></div><div class="host-gallery"><div class="host-gallery-label">Юлия на IT-конференциях и мероприятиях</div><div class="live-slider" data-slider="speaking"><div class="live-stage"><div class="live-slides"><figure class="live-slide" id="live-photo-1" data-index="0"><img src="data:image/webp;base64,UklGRny6AQBXRUJQVlA4IHC6AQDQvQidASoABVUDPpFAmkmlo6ivJ9LsyeAS
 CWduQruF3/X5wVPd1aeq8u7oxFYvXM/1m7v1PzBeF/vPEs7G+wBwyCAvmAZq
 1H7/wekZ+ff73oq5+OXLtzVn5zFr7xy/eT3uvmcvR+o3cg+c7zPvy59lf1FP
 6B1ZX7oexZ02WOm+3/Nj8t/of+54f/nH3T/L/an/xfG//LZy/mv9vzU/rH7c
@@ -16461,8 +16482,7 @@ const cards=Array.from(list.querySelectorAll('.mission-item'));
 function info(){const gap=parseFloat(getComputedStyle(list).columnGap)||0, w=cards[0].getBoundingClientRect().width+gap;const n=Math.max(0,Math.min(cards.length-1,Math.round(list.scrollLeft/w)));pos.textContent=(n+1)+' / '+cards.length;prev.disabled=n===0;next.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-3;}
 function move(step){const w=cards[0].getBoundingClientRect().width+(parseFloat(getComputedStyle(list).columnGap)||0);list.scrollBy({left:step*w,behavior:'smooth'});}
 prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));list.addEventListener('scroll',info,{passive:true});window.addEventListener('resize',info);info();
-const routes={a:'На перевале буря задержала отряд. Придётся искать укрытие и менять план.',b:'Гномы обнаружили повреждённый мост. Есть время подготовить инструменты и распределить задачи.',c:'Хранители согласны помочь, но потребовали гарантий. Начинаются переговоры об условиях перехода.'};
-document.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-route]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');document.getElementById('out').textContent=routes[b.dataset.route];}));
+
 })();
 
 (function () {
