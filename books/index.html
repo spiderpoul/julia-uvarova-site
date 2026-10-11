@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Книги Юлии Уваровой — IT, психология, материнство, отношения</title>
+  <meta name="description" content="Книги Юлии Уваровой: «Дебаг выгорания. Истории IT-фениксов», личная книга о материнстве и цикл «Откровения танго-хулиганки»." />
+
+  <style>
+    :root {
+      --bg: #FFF9F3;
+      --surface: #FFFCF8;
+      --text: #243746;
+      --muted: #667A86;
+      --line: #D9E5E4;
+
+      --petrol: #087F86;
+      --petrol-deep: #066A70;
+      --cyan: #28BCEB;
+      --orange: #FF7043;
+      --coral: #F58CA0;
+
+      --petrol-soft: #E8F6F5;
+      --cyan-soft: #EAF8FD;
+      --orange-soft: #FFF0EB;
+      --coral-soft: #FDECF1;
+
+      --radius: 30px;
+      --shadow: 0 20px 60px rgba(8,127,134,.09);
+      --container: min(1160px, calc(100% - 36px));
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 88% 8%, rgba(40,188,235,.09), transparent 28rem),
+        radial-gradient(circle at 8% 28%, rgba(245,140,160,.08), transparent 24rem),
+        linear-gradient(180deg, #FFF9F3 0%, #FAFAF7 100%);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+    .container { width: var(--container); margin: auto; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,249,243,.90);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(8,127,134,.14);
+    }
+
+    .nav-inner {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      color: var(--petrol-deep);
+      font-weight: 900;
+      letter-spacing: -.035em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      color: #526B76;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color .18s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--petrol); }
+
+    .nav-links a.active { font-weight: 850; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 850;
+      border: 0;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn.primary {
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 10px 24px rgba(255,112,67,.22);
+    }
+
+    .btn.primary:hover { background: #F2643E; }
+
+    .btn.secondary {
+      background: var(--petrol-deep);
+      color: white;
+    }
+
+    .btn.ghost {
+      background: var(--surface);
+      color: var(--petrol-deep);
+      border: 1px solid #CFE0DE;
+    }
+
+    .hero { padding: 76px 0 52px; }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      padding: 54px;
+      border: 1px solid #C9E3E1;
+      border-radius: 38px;
+      background:
+        linear-gradient(135deg, #E8F6F5 0%, #FFFCF8 54%, #EAF8FD 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::after {
+      content: "BOOKS";
+      position: absolute;
+      right: -12px;
+      bottom: -44px;
+      color: rgba(8,127,134,.055);
+      font-size: clamp(100px, 17vw, 220px);
+      font-weight: 950;
+      letter-spacing: -.09em;
+      line-height: .8;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #F4FCFB;
+      border: 1px solid #BFDCD9;
+      color: var(--petrol);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 24px 0 20px;
+      max-width: 900px;
+      font-size: clamp(48px, 7vw, 86px);
+      line-height: .94;
+      letter-spacing: -.065em;
+    }
+
+    .hero-lead {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0;
+      color: #536A76;
+      font-size: clamp(19px, 2.1vw, 24px);
+      line-height: 1.45;
+    }
+
+    .hero-note {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: var(--text);
+      font-size: 17px;
+      font-weight: 750;
+    }
+
+    section { padding: 68px 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 430px);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--petrol);
+      font-size: 12px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -.052em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .book-feature {
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+      gap: 36px;
+      align-items: center;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background: var(--surface);
+      box-shadow: 0 14px 38px rgba(8,127,134,.055);
+    }
+
+    .book-feature + .book-feature { margin-top: 18px; }
+
+    .cover-shell {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      max-width: 310px;
+      aspect-ratio: 2 / 3;
+      margin: auto;
+      padding: 18px;
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.9), rgba(255,255,255,.55));
+      border: 1px dashed rgba(8,127,134,.30);
+    }
+
+    .cover-shell .cover-photo{width:100%;height:100%;display:block;object-fit:contain;border-radius:12px;box-shadow:0 12px 28px rgba(18,53,80,.18)}
+    .cover-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      color: var(--petrol);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 850;
+      background:
+        linear-gradient(145deg, var(--petrol-soft), var(--cyan-soft));
+    }
+
+    .cover-placeholder.orange {
+      color: #9A482E;
+      background: linear-gradient(145deg, var(--orange-soft), #FFF8F1);
+    }
+
+    .cover-placeholder.coral {
+      color: #91566D;
+      background: linear-gradient(145deg, var(--coral-soft), #FFF8FA);
+    }
+
+    .cover-placeholder small {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .book-copy { max-width: 700px; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid #CFE3E1;
+      background: #F4FCFB;
+      color: var(--petrol-deep);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .tag.orange {
+      border-color: #FFD6C9;
+      background: var(--orange-soft);
+      color: #A6492D;
+    }
+
+    .tag.coral {
+      border-color: #F6D0DC;
+      background: var(--coral-soft);
+      color: #955A6F;
+    }
+
+    .book-copy h3 {
+      margin: 0 0 15px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.03;
+      letter-spacing: -.045em;
+    }
+
+    .book-copy .book-subtitle {
+      margin: -6px 0 17px;
+      color: var(--petrol);
+      font-size: 18px;
+      font-weight: 850;
+    }
+
+    .book-copy p {
+      margin: 0 0 14px;
+      color: #536A76;
+      font-size: 17px;
+    }
+
+    .book-copy p strong { color: var(--text); }
+
+    .why-read {
+      margin: 18px 0 22px;
+    }
+
+    .why-read-label {
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    .why-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .why-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: #FFF7F1;
+      border: 1px solid #FFD9CC;
+      color: #8D442F;
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .why-chip.petrol {
+      background: #EEF9F8;
+      border-color: #C9E3E1;
+      color: var(--petrol-deep);
+    }
+
+    .cycle-copy .why-read-label { color: #BFEFF1; }
+
+    .cycle-copy .why-chip {
+      background: rgba(255,255,255,.11);
+      border-color: rgba(255,255,255,.28);
+      color: white;
+    }
+
+    .reader-feedback { padding: 74px 0 8px; }
+
+    .feedback-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) auto;
+      gap: 32px;
+      align-items: center;
+      padding: 38px;
+      border-radius: 32px;
+      border: 1px solid #F5CEC2;
+      background: linear-gradient(135deg, #FFF0EB 0%, #FFFCF8 55%, #FDECF1 100%);
+      box-shadow: 0 18px 46px rgba(255,112,67,.08);
+    }
+
+    .feedback-card::after {
+      content: "♥";
+      position: absolute;
+      right: 28px;
+      bottom: -26px;
+      color: rgba(245,140,160,.12);
+      font-size: 150px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .feedback-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feedback-card h2 {
+      max-width: 760px;
+      font-size: clamp(32px, 4.2vw, 48px);
+    }
+
+    .feedback-card p {
+      max-width: 760px;
+      margin: 15px 0 0;
+      color: #536A76;
+      font-size: 17px;
+    }
+
+    .feedback-note {
+      margin-top: 10px !important;
+      color: #7C5963 !important;
+      font-weight: 750;
+    }
+
+    .book-points {
+      display: grid;
+      gap: 9px;
+      margin: 20px 0 24px;
+    }
+
+    .book-point {
+      position: relative;
+      padding-left: 24px;
+      color: #3F5964;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .book-point::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      color: var(--orange);
+      font-size: 21px;
+    }
+
+    .book-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category-work .book-feature {
+      background: linear-gradient(135deg, #FFFCF8 58%, #EAF8FD);
+    }
+
+    .category-life .book-feature {
+      background: linear-gradient(135deg, #FFFCF8 58%, #FFF0EB);
+    }
+
+    .cycle-hero {
+      overflow: hidden;
+      padding: 38px;
+      border-radius: 34px;
+      background:
+        linear-gradient(140deg, var(--petrol-deep) 0%, var(--petrol) 57%, #1599A0 100%);
+      color: white;
+      box-shadow: 0 28px 70px rgba(8,127,134,.20);
+    }
+
+    .cycle-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .cycle-visual {
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .book-stack {
+      position: relative;
+      width: min(340px, 82vw);
+      height: 360px;
+    }
+
+    .mini-cover {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 176px;
+      aspect-ratio: 2 / 3;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.48);
+      border-radius: 15px;
+      background: linear-gradient(155deg, #FFFCF8, #FDECF1);
+      color: var(--petrol-deep);
+      box-shadow: 0 18px 40px rgba(5,56,60,.19);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+      transform-origin: center 82%;
+    }
+
+    .mini-cover:nth-child(1){ transform: translate(-50%,-50%) rotate(-18deg) translateX(-62px); }
+    .mini-cover:nth-child(2){ transform: translate(-50%,-50%) rotate(-12deg) translateX(-44px); background:linear-gradient(155deg,#EAF8FD,#FFFCF8); }
+    .mini-cover:nth-child(3){ transform: translate(-50%,-50%) rotate(-7deg) translateX(-26px); background:linear-gradient(155deg,#FFF0EB,#FFFCF8); }
+    .mini-cover:nth-child(4){ transform: translate(-50%,-50%) rotate(0deg); z-index:4; }
+    .mini-cover:nth-child(5){ transform: translate(-50%,-50%) rotate(7deg) translateX(26px); background:linear-gradient(155deg,#E8F6F5,#FFFCF8); }
+    .mini-cover:nth-child(6){ transform: translate(-50%,-50%) rotate(12deg) translateX(44px); background:linear-gradient(155deg,#FDECF1,#FFFCF8); }
+    .mini-cover:nth-child(7){ transform: translate(-50%,-50%) rotate(18deg) translateX(62px); background:linear-gradient(155deg,#FFF0EB,#EAF8FD); }
+
+    .cycle-copy .section-kicker { color: #BFEFF1; }
+
+    .cycle-copy h2 {
+      margin-bottom: 18px;
+      color: white;
+    }
+
+    .cycle-copy p {
+      margin: 0 0 15px;
+      color: #D8F0EF;
+      font-size: 17px;
+    }
+
+    .cycle-copy strong { color: white; }
+
+    .cycle-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .cycle-actions .btn.ghost {
+      border-color: rgba(255,255,255,.32);
+      background: rgba(255,255,255,.10);
+      color: white;
+    }
+
+    .series-list { padding-top: 34px; }
+
+    .series-list-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .series-list-head h3 {
+      margin: 0;
+      font-size: 29px;
+      letter-spacing: -.035em;
+    }
+
+    .series-list-head p {
+      margin: 0;
+      max-width: 520px;
+      color: #CBE7E6;
+      font-size: 14px;
+    }
+
+    .series-books {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .series-book {
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .series-cover {
+      aspect-ratio: 2 / 3;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      border: 1px dashed rgba(255,255,255,.40);
+      background: rgba(255,255,255,.10);
+      color: white;
+      font-weight: 900;
+      font-size: 12px;
+      text-align: center;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .series-book:hover .series-cover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.16);
+    }
+
+    .series-book span {
+      display: block;
+      margin-top: 8px;
+      color: #D8F0EF;
+      font-size: 12px;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    .training-bridge { padding-top: 86px; }
+
+    .training-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) auto;
+      gap: 34px;
+      align-items: center;
+      padding: 38px;
+      border-radius: 32px;
+      border: 1px solid #C9E3E1;
+      background: linear-gradient(135deg, #E8F6F5 0%, #FFFCF8 60%, #EAF8FD 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .training-card .section-kicker { margin-bottom: 11px; }
+
+    .training-card h2 {
+      max-width: 760px;
+      font-size: clamp(32px, 4.2vw, 48px);
+    }
+
+    .training-card p {
+      max-width: 760px;
+      margin: 15px 0 0;
+      color: #536A76;
+      font-size: 17px;
+    }
+
+    footer {
+      padding: 30px 0 48px;
+      color: #71838B;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: .8fr 1fr 1.5fr;
+      gap: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-title {
+      margin-bottom: 7px;
+      color: var(--petrol-deep);
+      font-weight: 900;
+    }
+
+    .footer-block {
+      line-height: 1.7;
+    }
+
+    .footer-block a {
+      color: var(--petrol);
+      text-decoration: none;
+    }
+
+    .footer-block a:hover { text-decoration: underline; }
+
+    ::selection {
+      background: #BCEBF8;
+      color: #173742;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links { display: none; }
+      .section-head { grid-template-columns: 1fr; gap: 12px; }
+      .book-feature { grid-template-columns: 260px minmax(0,1fr); gap: 28px; }
+      .cycle-grid { grid-template-columns: 1fr; }
+      .cycle-visual { min-height: 330px; }
+      .book-stack { height: 320px; }
+      .series-books { grid-template-columns: repeat(4, 1fr); }
+      .training-card { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      :root { --container: min(100% - 24px, 1160px); }
+
+      nav .btn { padding: 10px 13px; font-size: 13px; }
+      .hero { padding: 46px 0 30px; }
+      .hero-card { padding: 28px 24px; border-radius: 28px; }
+      .hero-card::after { display: none; }
+      h1 { font-size: 48px; }
+
+      section { padding: 50px 0; }
+
+      .book-feature {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        border-radius: 25px;
+      }
+
+      .cover-shell { max-width: 250px; }
+      .book-copy h3 { font-size: 34px; }
+
+      .cycle-hero { padding: 26px 20px; border-radius: 27px; }
+      .cycle-visual { min-height: 285px; }
+      .book-stack { width: 260px; height: 265px; }
+      .mini-cover { width: 132px; border-radius: 12px; }
+      .mini-cover:nth-child(1){ transform: translate(-50%,-50%) rotate(-18deg) translateX(-42px); }
+      .mini-cover:nth-child(2){ transform: translate(-50%,-50%) rotate(-12deg) translateX(-30px); }
+      .mini-cover:nth-child(3){ transform: translate(-50%,-50%) rotate(-7deg) translateX(-17px); }
+      .mini-cover:nth-child(4){ transform: translate(-50%,-50%) rotate(0deg); }
+      .mini-cover:nth-child(5){ transform: translate(-50%,-50%) rotate(7deg) translateX(17px); }
+      .mini-cover:nth-child(6){ transform: translate(-50%,-50%) rotate(12deg) translateX(30px); }
+      .mini-cover:nth-child(7){ transform: translate(-50%,-50%) rotate(18deg) translateX(42px); }
+
+      .series-list-head { display: block; }
+      .series-list-head p { margin-top: 8px; }
+      .series-books { grid-template-columns: repeat(2, 1fr); gap: 13px; }
+
+      .feedback-card { grid-template-columns: 1fr; padding: 28px 24px; border-radius: 26px; }
+      .training-card { padding: 28px 24px; border-radius: 26px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="/">Юлия Уварова</a>
+
+      <div class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/#companies">Тренинги</a>
+        <a class="active" href="/books/">Книги</a>
+        <a href="/#media">Выступления</a>
+        <a href="/#contact">Контакты</a>
+      </div>
+
+      <a class="btn primary" href="/#companies">Тренинги и тимбилдинги →</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="eyebrow">Книги Юлии Уваровой</span>
+          <h1>О человеке.<br>На работе и вне её.</h1>
+          <p class="hero-lead">
+            Я пишу о том, что происходит с человеком в очень разных обстоятельствах:
+            о выгорании в IT, сложных чувствах, материнстве, любви, сексе, отношениях и выборе.
+          </p>
+          <p class="hero-note">
+            Здесь профессиональные книги соседствуют с личными историями и художественной прозой —
+            потому что во всех них меня интересует одно: что с нами происходит и как мы через это проходим.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Работа, IT и психология -->
+    <section class="category-work" id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">01 · Работа, IT и психология</span>
+            <h2>Когда работа перестаёт быть просто работой</h2>
+          </div>
+          <p>
+            Профессиональные книги о людях в IT: без абстрактных советов, с живыми историями,
+            причинами, последствиями и тем, что действительно можно сделать.
+          </p>
+        </div>
+
+        <article class="book-feature">
+          <div class="cover-shell">
+            <img class="cover-photo" src="../assets/debug-vygoraniya-cover.jpg" width="1055" height="1491" alt="Обложка книги «Дебаг выгорания. Истории IT-фениксов»" loading="lazy">
+          </div>
+
+          <div class="book-copy">
+            <div class="tags">
+              <span class="tag">IT</span>
+              <span class="tag">психология</span>
+              <span class="tag">реальные истории</span>
+              <span class="tag">нон-фикшн</span>
+            </div>
+
+            <h3>Дебаг выгорания</h3>
+            <div class="book-subtitle">Истории IT-фениксов</div>
+
+            <div class="why-read">
+              <div class="why-read-label">Зачем читать</div>
+              <div class="why-chips">
+                <span class="why-chip petrol">если работа выжимает</span>
+                <span class="why-chip petrol">когда пропал смысл</span>
+                <span class="why-chip petrol">чтобы раньше заметить выгорание</span>
+                <span class="why-chip petrol">чтобы увидеть реальные пути выхода</span>
+              </div>
+            </div>
+
+            <p>
+              <strong>33 человека из IT рассказывают, как они выгорели — и как выбирались.</strong>
+              Не идеальные истории успеха, а реальные ситуации: работа на износ, потеря смысла,
+              токсичная среда, невозможность остановиться, увольнение, смена роли и попытка снова
+              почувствовать интерес к жизни.
+            </p>
+
+            <p>
+              Истории собраны в тематические блоки. После каждого — мои психологические комментарии:
+              что могло привести человека в эту точку, что помогло и какие шаги можно попробовать,
+              если узнаёшь в этих историях себя.
+            </p>
+
+            <div class="book-points">
+              <div class="book-point">33 истории людей из IT</div>
+              <div class="book-point">Интервью + психологический разбор</div>
+              <div class="book-point">Причины выгорания и практические способы с ним работать</div>
+            </div>
+
+            <div class="book-actions">
+              <a class="btn secondary" href="/books/#work">О книге →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. Жизнь и сложные чувства -->
+    <section class="category-life" id="life">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">02 · Жизнь и сложные чувства</span>
+            <h2>Истории, в которых не нужно быть «правильной»</h2>
+          </div>
+          <p>
+            Здесь — личный опыт и чувства, о которых не всегда удобно говорить вслух.
+            Без правильных ответов и обязательной счастливой картинки.
+          </p>
+        </div>
+
+        <article class="book-feature">
+          <div class="cover-shell">
+            <div class="cover-placeholder orange">
+              Место под обложку
+              <small>Книга о материнстве</small>
+            </div>
+          </div>
+
+          <div class="book-copy">
+            <div class="tags">
+              <span class="tag orange">материнство</span>
+              <span class="tag orange">личная история</span>
+              <span class="tag orange">психология</span>
+            </div>
+
+            <h3>Книга о материнстве</h3>
+            <div class="book-subtitle">Название в работе</div>
+
+            <div class="why-read">
+              <div class="why-read-label">Зачем читать</div>
+              <div class="why-chips">
+                <span class="why-chip">если материнство не радует «как положено»</span>
+                <span class="why-chip">если страшно потерять прежнюю жизнь</span>
+                <span class="why-chip">если злишься — и потом стыдно</span>
+                <span class="why-chip">чтобы увидеть: любовь может прийти не сразу</span>
+              </div>
+            </div>
+
+            <p>
+              <strong>История пути от отрицания и нежелания ребёнка — к любви к нему.</strong>
+              Не книга о том, как «правильно быть мамой», и не сборник советов для декрета.
+              Это честный рассказ о беременности, сопротивлении, злости, страхе, потере привычной
+              жизни, сложных отношениях со своими чувствами — и о том, как всё это постепенно менялось.
+            </p>
+
+            <p>
+              Для тех, кому знакомы чувства, которые трудно вписать в красивую картинку материнства.
+              И для тех, кому важно увидеть: сильные и противоречивые эмоции тоже могут быть частью пути.
+            </p>
+
+            <div class="book-points">
+              <div class="book-point">Беременность и материнство без идеализации</div>
+              <div class="book-point">Сильные чувства, внутренний конфликт и трансформация</div>
+              <div class="book-point">Личный опыт — не инструкция «как надо»</div>
+            </div>
+
+            <div class="book-actions">
+              <a class="btn secondary" href="/books/#life">О книге →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Любовь и отношения -->
+    <section id="tango">
+      <div class="container">
+        <div class="cycle-hero">
+          <div class="cycle-grid">
+            <div class="cycle-visual" aria-label="Место под семь обложек цикла">
+              <div class="book-stack">
+                <div class="mini-cover">Обложка<br>1</div>
+                <div class="mini-cover">Обложка<br>2</div>
+                <div class="mini-cover">Обложка<br>3</div>
+                <div class="mini-cover">Обложка<br>4</div>
+                <div class="mini-cover">Обложка<br>5</div>
+                <div class="mini-cover">Обложка<br>6</div>
+                <div class="mini-cover">Обложка<br>7</div>
+              </div>
+            </div>
+
+            <div class="cycle-copy">
+              <span class="section-kicker">03 · Любовь и отношения · художественная проза</span>
+              <h2>Откровения танго-хулиганки</h2>
+
+              <div class="why-read">
+                <div class="why-read-label">Зачем читать</div>
+                <div class="why-chips">
+                  <span class="why-chip">для отдыха и эмоций</span>
+                  <span class="why-chip">про любовь и секс 18+</span>
+                  <span class="why-chip">чтобы узнать себя в неудобных чувствах</span>
+                  <span class="why-chip">чтобы лучше понять женский взгляд на отношения</span>
+                </div>
+              </div>
+
+              <p>
+                <strong>Цикл из семи книг — и он не про танго.</strong>
+                Это истории о любви, сексе, отношениях, выборе, желаниях и чувствах,
+                в которых не всегда хочется признаваться даже себе.
+              </p>
+
+              <p>
+                В центре — Вероника и её путь через отношения, близость, ошибки,
+                противоречия и попытки понять, чего она хочет на самом деле.
+                Каждая книга — отдельная часть истории, но вместе они складываются в один большой цикл.
+              </p>
+
+              <p>
+                Их можно читать просто как захватывающую художественную историю — для отдыха, эмоций
+                и возможности ненадолго пожить чужой жизнью. А можно узнавать в Веронике собственные
+                мысли, сомнения и решения, которые когда-то было страшно назвать вслух.
+              </p>
+
+              <div class="cycle-actions">
+                <a class="btn primary" href="https://julove-coach.ru/otkroveniya-tango-huliganki-1/">Посмотреть первую книгу →</a>
+                <a class="btn ghost" href="#tango-books">Все 7 книг ↓</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="series-list" id="tango-books">
+            <div class="series-list-head">
+              <h3>Семь книг цикла</h3>
+              <p>
+                Выберите часть цикла, чтобы посмотреть её историю, описание
+                и варианты чтения или покупки.
+              </p>
+            </div>
+
+            <div class="series-books">
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 1</span>
+              </div>
+
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 2</span>
+              </div>
+
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 3</span>
+              </div>
+
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 4</span>
+              </div>
+
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 5</span>
+              </div>
+
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 6</span>
+              </div>
+
+              <div class="series-book">
+                <div class="series-cover">Место<br>под обложку</div>
+                <span>Книга 7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reader feedback -->
+    <section class="reader-feedback" id="feedback">
+      <div class="container">
+        <div class="feedback-card">
+          <div>
+            <span class="section-kicker">Если вы уже читали мои книги</span>
+            <h2>Напишите мне пару слов — мне правда важно ваше мнение.</h2>
+            <p>
+              Что откликнулось? Что задело? Что осталось с вами после последней страницы?
+              Не обязательно писать большой отзыв — даже два-три предложения в личку для меня очень ценны.
+            </p>
+            <p class="feedback-note">
+              А если книга вам понравилась, порекомендуйте её человеку, которому она может быть сейчас нужна.
+              Для автора это одна из самых важных форм поддержки.
+            </p>
+          </div>
+          <div>
+            <a class="btn primary" href="/#contact">Написать мне →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- very bottom cross-sell -->
+    <section class="training-bridge" id="more">
+      <div class="container">
+        <div class="training-card">
+          <div>
+            <span class="section-kicker">И ещё одна часть моей работы</span>
+            <h2>Я не только пишу книги. Ещё я провожу тренинги и тимбилдинги для IT-команд и руководителей.</h2>
+            <p>
+              Работаю с реальными управленческими ситуациями: сложными разговорами,
+              обратной связью, делегированием, переходом из специалиста в руководители
+              и другими задачами, где одних технических навыков уже недостаточно.
+            </p>
+          </div>
+
+          <div>
+            <a class="btn primary" href="/#companies">Тренинги и тимбилдинги →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-block">
+        <div class="footer-title">Юлия Уварова</div>
+        IT-психолог · 9 лет в разработке
+      </div>
+
+      <div class="footer-block">
+        <div class="footer-title">Разделы</div>
+        <a href="/">Главная</a><br>
+        <a href="/#companies">Тренинги</a><br>
+        <a href="/books/">Книги</a>
+      </div>
+
+      <div class="footer-block">
+        <div class="footer-title">Книги</div>
+        <a href="/books/#work">«Дебаг выгорания»</a><br>
+        <a href="/books/#life">Книга о материнстве</a><br>
+        <a href="/books/#tango">«Откровения танго-хулиганки»</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
