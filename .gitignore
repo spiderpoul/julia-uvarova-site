@@ -3,9 +3,8 @@
 .env.*
 !.env.example
 
-# Временные файлы
-__pycache__/
-*.py[cod]
-.venv/
-.pytest_cache/
+# Зависимости и временные файлы
+node_modules/
 .DS_Store
+*.log
+coverage/

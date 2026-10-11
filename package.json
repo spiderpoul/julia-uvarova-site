@@ -1,0 +1,17 @@
+{
+  "name": "julia-uvarova-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "deploy": "node scripts/deploy-ftp.mjs",
+    "deploy:dry-run": "node scripts/deploy-ftp.mjs --dry-run",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "basic-ftp": "^6.2.3"
+  }
+}
