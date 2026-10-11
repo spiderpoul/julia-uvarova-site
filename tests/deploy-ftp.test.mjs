@@ -65,3 +65,43 @@ test('загрузка создаёт каталоги, сохраняет пу�
   assert.equal(log.filter(([name]) => name === 'uploadFrom').length, 2);
   assert.equal(log.at(-1)[0], 'close');
 });
+
+test('при ECONNREFUSED показываем адрес и порт и закрываем соединение', async () => {
+  const log = [];
+  class RefusedClient {
+    async access() {
+      log.push('access');
+      const err = new Error('Connect ECONNREFUSED Control socket');
+      err.code = 'ECONNREFUSED';
+      throw err;
+    }
+    close() { log.push('close'); }
+  }
+  await assert.rejects(
+    deploy('/tmp/site', ['index.html'], {
+      timeout: 30000, host: 'ftp.example.test', user: 'user',
+      password: 'secret', port: 21, secure: false, remoteDir: '/public_html',
+    }, RefusedClient),
+    /ftp\.example\.test:21.*ECONNREFUSED/,
+  );
+  assert.deepEqual(log, ['access', 'close']);
+});
+
+test('отказ AUTH TLS не ведёт к автоматическому переходу на обычный FTP', async () => {
+  const log = [];
+  class NoTlsClient {
+    async access(settings) {
+      log.push(settings.secure);
+      throw new Error('500 This security scheme is not implemented');
+    }
+    close() { log.push('close'); }
+  }
+  await assert.rejects(
+    deploy('/tmp/site', ['index.html'], {
+      timeout: 30000, host: 'ftp.example.test', user: 'user',
+      password: 'secret', port: 21, secure: true, remoteDir: '/public_html',
+    }, NoTlsClient),
+    /AUTH TLS/,
+  );
+  assert.deepEqual(log, [true, 'close']);
+});

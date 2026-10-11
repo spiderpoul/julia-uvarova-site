@@ -133,10 +133,31 @@ export function deploymentConfig(env) {
 export async function deploy(root, files, config, ClientClass) {
   const client = new ClientClass(config.timeout);
   try {
-    await client.access({
-      host: config.host, user: config.user, password: config.password,
-      port: config.port, secure: config.secure,
-    });
+    try {
+      await client.access({
+        host: config.host, user: config.user, password: config.password,
+        port: config.port, secure: config.secure,
+      });
+    } catch (error) {
+      // Не повторяем подключение с другим режимом безопасности автоматически.
+      if (error.code === 'ECONNREFUSED' || /\bECONNREFUSED\b/.test(error.message ?? '')) {
+        throw new Error(
+          `Сервер ${config.host}:${config.port} отклонил соединение (ECONNREFUSED). ` +
+          'Проверьте FTP_HOST и FTP_PORT, доступность FTP-сервиса и возможную блокировку IP на хостинге. ' +
+          'Смена FTP_USE_TLS не устраняет отказ TCP-соединения.',
+          { cause: error },
+        );
+      }
+      if (config.secure && /security scheme is not implemented/i.test(error.message ?? '')) {
+        throw new Error(
+          'Сервер отклонил AUTH TLS (FTP 500). Проверьте поддержку FTPS (explicit TLS). ' +
+          'Только если хостинг предоставляет обычный FTP, установите FTP_USE_TLS=false; ' +
+          'при этом пароль и файлы передаются без шифрования.',
+          { cause: error },
+        );
+      }
+      throw error;
+    }
     await client.ensureDir(config.remoteDir);
     const remoteRoot = await client.pwd();
     for (const [index, file] of files.entries()) {
