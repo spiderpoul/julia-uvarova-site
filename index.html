@@ -264,7 +264,7 @@
     /* companies */
     .companies{
       display:grid;
-      grid-template-columns:1.06fr .94fr;
+      grid-template-columns:1.3fr .7fr;
       gap:24px;
       align-items:stretch;
     }
@@ -379,6 +379,9 @@
     footer{padding:34px 0 46px;color:#6B7D85;font-size:14px}
     .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
+    .media-thumb{position:relative;overflow:hidden}
+    .media-thumb img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+    .media-thumb .play{z-index:1}
     /* Home: clear B2B offer, authentic event photos and compact slider */
     .hero h1{font-size:clamp(43px,5.1vw,68px);line-height:1;letter-spacing:-.045em}
     .hero-visual{padding:0;align-items:stretch}
@@ -472,7 +475,6 @@
 
         <div class="hero-visual">
           <img class="hero-portrait" src="trainings/teamlead/assets/image-01.jpg" alt="Юлия Уварова — IT-психолог и ведущая тренингов" fetchpriority="high" />
-          <div class="hero-note">9 лет в IT-разработке.<br>11 лет в психологии.</div>
         </div>
       </div>
     </section>
@@ -602,7 +604,7 @@
 
         <div class="media">
           <article class="media-card">
-            <div class="media-thumb"><div class="play">▶</div></div>
+            <div class="media-thumb"><img src="trainings/teamlead/assets/image-04.webp" alt="Выступление Юлии Уваровой на IT-конференции" loading="lazy"><div class="play">▶</div></div>
             <div class="media-body">
               <h3>Выступления</h3>
               <p>Доклады на IT-конференциях и корпоративных мероприятиях.</p>
@@ -611,7 +613,7 @@
           </article>
 
           <article class="media-card">
-            <div class="media-thumb"><div class="play">▶</div></div>
+            <div class="media-thumb"><img src="trainings/teamlead/assets/image-08.webp" alt="Юлия Уварова беседует с участником IT-конференции" loading="lazy"><div class="play">▶</div></div>
             <div class="media-body">
               <h3>Подкаст «Дебаг карьеры»</h3>
               <p>Как специалисты и руководители в IT меняют карьеру, справляются с кризисами и принимают непростые решения. Интервью с реальными историями и выводами гостей.</p>
