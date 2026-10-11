@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#087F86" />
+  <title>Юлия Уварова — Карьера по-человечески</title>
+  <meta name="description" content="Юлия Уварова — IT-психолог, 9 лет в разработке, автор книг. Тренинги для IT-команд, книги, выступления и корпоративные проекты." />
+  <style>
+    :root{
+      --petrol:#087F86;
+      --petrol-dark:#075E63;
+      --cyan:#28BCEB;
+      --orange:#FF7043;
+      --coral:#F58CA0;
+      --milk:#FFF9F3;
+      --paper:#FFFFFF;
+      --text:#243746;
+      --muted:#6C7A86;
+      --line:#D8E6E7;
+      --soft-blue:#EAF8FD;
+      --soft-petrol:#E7F4F4;
+      --soft-orange:#FFF0EA;
+      --shadow:0 18px 48px rgba(36,55,70,.09);
+      --radius:26px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--milk);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(1180px,calc(100% - 32px));margin:auto}
+    .section{padding:84px 0}
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      font-size:clamp(54px,8vw,96px);
+      line-height:.95;
+      letter-spacing:-.05em;
+      margin-bottom:20px;
+    }
+    h2{
+      font-size:clamp(34px,4.5vw,58px);
+      line-height:1;
+      letter-spacing:-.035em;
+      margin-bottom:14px;
+    }
+    h3{
+      font-size:24px;
+      line-height:1.12;
+      letter-spacing:-.02em;
+      margin-bottom:10px;
+    }
+    .lead{
+      font-size:clamp(18px,2.1vw,23px);
+      color:#405965;
+      max-width:720px;
+    }
+    .muted{color:var(--muted)}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:16px;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--petrol-dark);
+    }
+    .eyebrow:before{
+      content:"";
+      width:26px;height:3px;border-radius:8px;background:var(--orange);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 19px;
+      border-radius:15px;
+      border:1px solid transparent;
+      font-weight:850;
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(255,112,67,.2)}
+    .btn-secondary{background:#fff;border-color:var(--petrol);color:var(--petrol-dark)}
+    .link{font-weight:850;color:var(--petrol-dark)}
+    .link:hover{color:var(--orange)}
+
+    /* header */
+    .header-wrap{
+      position:sticky;top:0;z-index:50;
+      padding:10px 0;
+      background:rgba(255,249,243,.88);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(216,230,231,.8);
+    }
+    .header{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:10px 12px 10px 16px;
+      box-shadow:0 8px 24px rgba(36,55,70,.05);
+    }
+    .brand{display:flex;align-items:center;gap:11px;min-width:max-content}
+    .brand-mark{
+      width:40px;height:40px;border-radius:13px;
+      background:linear-gradient(135deg,var(--petrol),var(--cyan));
+      color:#fff;font-weight:950;
+      display:grid;place-items:center;
+    }
+    .brand-name{font-weight:950;line-height:1}
+    .brand-sub{font-size:12px;color:var(--muted);margin-top:5px}
+    .nav{display:flex;gap:18px;align-items:center;font-size:14px;font-weight:800}
+    .nav a:hover{color:var(--petrol)}
+    .menu{display:none}
+
+    /* hero */
+    .hero{padding:54px 0 64px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:42px;
+      align-items:center;
+    }
+    .hero-copy{padding:28px 0}
+    .hero-title-accent{color:var(--petrol)}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0}
+    .proofs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:24px;
+    }
+    .proof{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:8px 10px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      font-size:13px;
+    }
+    .proof b{color:var(--petrol-dark)}
+    .hero-visual{
+      min-height:520px;
+      border-radius:34px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid #DCEBEC;
+      box-shadow:var(--shadow);
+      background:
+        radial-gradient(circle at 82% 15%,rgba(40,188,235,.32),transparent 25%),
+        radial-gradient(circle at 15% 82%,rgba(255,112,67,.22),transparent 24%),
+        linear-gradient(145deg,#EAF8FD 0%,#fff 46%,#E7F4F4 100%);
+      display:flex;align-items:flex-end;justify-content:center;
+      padding:28px;
+    }
+    .photo-placeholder{
+      width:76%;
+      aspect-ratio:4/5;
+      border-radius:28px 28px 0 0;
+      display:grid;place-items:center;
+      text-align:center;
+      padding:28px;
+      font-weight:850;
+      color:#2F6C70;
+      border:1px dashed rgba(8,127,134,.32);
+      background:linear-gradient(135deg,#C7EEF6,#EAF7F6 52%,#FFD9CC);
+    }
+    .hero-note{
+      position:absolute;
+      right:22px;
+      top:26px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:17px;
+      padding:14px 16px;
+      width:170px;
+      font-weight:850;
+      font-size:14px;
+      box-shadow:var(--shadow);
+    }
+
+    /* route cards */
+    .routes{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .route{
+      min-height:240px;
+      padding:26px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      box-shadow:0 10px 30px rgba(36,55,70,.05);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .route:nth-child(1){background:linear-gradient(180deg,#fff,#EAF8FD)}
+    .route:nth-child(2){background:linear-gradient(180deg,#fff,#FFF0EA)}
+    .route:nth-child(3){background:linear-gradient(180deg,#fff,#E7F4F4)}
+    .route-label{
+      display:inline-flex;
+      align-self:flex-start;
+      padding:6px 9px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-size:12px;
+      font-weight:850;
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+    .route p{color:#4C626D;max-width:340px}
+
+    /* books */
+    .section-head{
+      display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px
+    }
+    .books{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .book{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(36,55,70,.05);
+    }
+    .book-cover{
+      aspect-ratio:16/10;
+      padding:22px;
+      display:flex;
+      align-items:flex-end;
+      font-size:30px;
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-.03em;
+    }
+    .b1{background:linear-gradient(135deg,#0D6670,#28BCEB 60%,#FFC1A9);color:#fff}
+    .b2{background:linear-gradient(135deg,#FF8A7A,#F3B2C1 55%,#6F315C);color:#fff}
+    .b3{background:linear-gradient(135deg,#F7F1EC,#CBE9E4 55%,#8EB3B0);color:var(--text)}
+    .book-body{padding:22px}
+    .book-body p{color:#526872;min-height:62px}
+    .tag{
+      display:inline-flex;padding:5px 8px;border-radius:999px;background:#F2F6F6;
+      color:#5C7079;font-size:12px;font-weight:850;margin-bottom:12px
+    }
+
+    /* companies */
+    .companies{
+      display:grid;
+      grid-template-columns:1.06fr .94fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    .company-main{
+      border-radius:30px;
+      padding:32px;
+      color:#fff;
+      background:linear-gradient(135deg,var(--petrol-dark),var(--petrol));
+      box-shadow:var(--shadow);
+    }
+    .company-main p{color:#DDF1F2}
+    .company-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:24px;
+    }
+    .company-chip{
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:17px;
+      padding:16px;
+      background:rgba(255,255,255,.07);
+      font-weight:800;
+    }
+    .company-side{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+    }
+    .company-side p{color:#526872}
+
+    /* media */
+    .media{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .media-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+    }
+    .media-thumb{
+      height:180px;
+      background:linear-gradient(135deg,#CDEFF6,#EAF8FD 48%,#FFD6C8);
+      display:grid;place-items:center;
+    }
+    .play{
+      width:62px;height:62px;border-radius:50%;
+      background:#fff;
+      display:grid;place-items:center;
+      color:var(--petrol-dark);
+      font-weight:950;
+      box-shadow:var(--shadow);
+    }
+    .media-body{padding:20px}
+    .media-body p{color:#526872}
+
+    /* about */
+    .about{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:24px;
+      align-items:center;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+    }
+    .about-photo{
+      min-height:330px;
+      border-radius:24px;
+      background:linear-gradient(145deg,#DDF6FB,#EAF5F3,#FFE0D5);
+      display:grid;place-items:center;
+      color:#2E7074;
+      text-align:center;
+      font-weight:850;
+      padding:30px;
+    }
+    .about-facts{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:18px;
+    }
+    .about-fact{
+      padding:8px 10px;
+      border-radius:11px;
+      border:1px solid var(--line);
+      background:#FAFCFC;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    /* CTA */
+    .cta{
+      background:linear-gradient(135deg,#075E63,#087F86 60%,#23A6B2);
+      color:#fff;
+      border-radius:32px;
+      padding:36px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:26px;
+      box-shadow:var(--shadow);
+    }
+    .cta p{color:#DDF4F5;max-width:700px;margin-bottom:0}
+    .cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    footer{padding:34px 0 46px;color:#6B7D85;font-size:14px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    @media(max-width:960px){
+      .nav{display:none}
+      .header .btn-primary{display:none}
+      .hero-grid,.companies,.about{grid-template-columns:1fr}
+      .routes,.books,.media{grid-template-columns:1fr 1fr}
+      .hero-visual{min-height:430px}
+      .cta{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-width:680px){
+      .section{padding:62px 0}
+      .hero{padding-top:28px}
+      .routes,.books,.media,.company-list{grid-template-columns:1fr}
+      .section-head{align-items:flex-start;flex-direction:column}
+      .hero-visual{min-height:360px}
+      .photo-placeholder{width:88%}
+      .brand-sub{display:none}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-wrap">
+    <div class="container">
+      <header class="header">
+        <a class="brand" href="#top">
+          <div class="brand-mark">Ю</div>
+          <div>
+            <div class="brand-name">Юлия Уварова</div>
+            <div class="brand-sub">IT-психолог · автор · 9 лет в разработке</div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="#books">Книги</a>
+          <a href="#companies">Для компаний</a>
+          <a href="#media">Выступления</a>
+          <a href="#about">Обо мне</a>
+        </nav>
+
+        <a class="btn btn-primary" href="#companies">Для компаний →</a>
+      </header>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Юлия Уварова · IT-психолог · автор</div>
+          <h1><span class="hero-title-accent">Карьера</span><br>по-человечески</h1>
+          <p class="lead">Пишу книги, провожу тренинги и выступаю о работе, управлении, выгорании и жизни вокруг всего этого.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#companies">Для компаний</a>
+            <a class="btn btn-secondary" href="#books">Книги</a>
+            <a class="btn btn-secondary" href="#media">Выступления</a>
+          </div>
+
+          <div class="proofs">
+            <span class="proof"><b>9 лет</b> в разработке</span>
+            <span class="proof"><b>11 лет</b> в психологии</span>
+            <span class="proof"><b>Автор</b> «Дебаг выгорания»</span>
+            <span class="proof"><b>Спикер</b> IT-конференций</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-note">Работа важна.<br>Но человек — больше работы.</div>
+          <div class="photo-placeholder">Здесь — крупный живой портрет Юлии</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="routes">
+          <a class="route" href="#companies">
+            <div>
+              <span class="route-label">Для компаний</span>
+              <h3>Тренинги и корпоративные проекты</h3>
+              <p>Руководители, команды, выгорание, сложные разговоры, спикеры и книги о компании.</p>
+            </div>
+            <span class="link">Смотреть →</span>
+          </a>
+
+          <a class="route" href="#books">
+            <div>
+              <span class="route-label">Для читателей</span>
+              <h3>Книги</h3>
+              <p>«Дебаг выгорания», «Откровения танго-хулиганки» и новая книга о материнстве.</p>
+            </div>
+            <span class="link">Смотреть книги →</span>
+          </a>
+
+          <a class="route" href="#media">
+            <div>
+              <span class="route-label">Посмотреть в деле</span>
+              <h3>Выступления и «Дебаг карьеры»</h3>
+              <p>Доклады, интервью и разговоры с людьми из IT.</p>
+            </div>
+            <span class="link">Смотреть →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Книги</div>
+            <h2>То, что остаётся после разговора</h2>
+          </div>
+          <a class="link" href="#">Все книги →</a>
+        </div>
+
+        <div class="books">
+          <article class="book">
+            <div class="book-cover b1">Дебаг<br>выгорания</div>
+            <div class="book-body">
+              <span class="tag">IT · выгорание</span>
+              <h3>Дебаг выгорания</h3>
+              <p>Для тех, кто устал от работы и пытается понять: это просто тяжёлый период или уже выгорание.</p>
+              <a class="link" href="#">Купить бумажную книгу с автографом →</a>
+            </div>
+          </article>
+
+          <article class="book">
+            <div class="book-cover b2">Откровения<br>танго-хулиганки</div>
+            <div class="book-body">
+              <span class="tag">Серия книг</span>
+              <h3>Откровения танго-хулиганки</h3>
+              <p>Для тех, кто хоть раз влюблялся не в того: любовь, секс, зависимость и выбор без «как правильно». 18+.</p>
+              <a class="link" href="#">Посмотреть серию →</a>
+            </div>
+          </article>
+
+          <article class="book">
+            <div class="book-cover b3">Книга<br>о материнстве</div>
+            <div class="book-body">
+              <span class="tag">В работе</span>
+              <h3>Книга о материнстве</h3>
+              <p>Для тех, кто боится потерять себя в материнстве: от «я не хочу ребёнка» до любви, которой не ожидала.</p>
+              <a class="link" href="#">Узнать о проекте →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="companies" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Для компаний</div>
+            <h2>Тренинги и корпоративные проекты</h2>
+          </div>
+        </div>
+
+        <div class="companies">
+          <div class="company-main">
+            <h3 style="font-size:34px">Тренинги для IT-команд и руководителей</h3>
+            <p>Коротко, конкретно, с разбором реальных рабочих ситуаций.</p>
+
+            <div class="company-list">
+              <div class="company-chip">Начинающим тимлидам</div>
+              <div class="company-chip">Опытным руководителям</div>
+              <div class="company-chip">Выгорание в IT</div>
+              <div class="company-chip">Подготовка спикеров</div>
+            </div>
+
+            <div style="margin-top:24px">
+              <a class="btn btn-primary" href="#">Посмотреть программы →</a>
+            </div>
+          </div>
+
+          <div class="company-side">
+            <span class="tag">Отдельное направление</span>
+            <h3 style="font-size:32px">Книга о вашей компании</h3>
+            <p>Интервью с сотрудниками, руководителями или основателями → цельная книга про людей, культуру, продукт или историю компании.</p>
+            <a class="link" href="#">Подробнее о корпоративных книгах →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Посмотреть меня в деле</div>
+            <h2>Выступления и медиа</h2>
+          </div>
+        </div>
+
+        <div class="media">
+          <article class="media-card">
+            <div class="media-thumb"><div class="play">▶</div></div>
+            <div class="media-body">
+              <h3>Выступления</h3>
+              <p>Доклады на IT-конференциях и корпоративных мероприятиях.</p>
+              <a class="link" href="#">Смотреть →</a>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-thumb"><div class="play">▶</div></div>
+            <div class="media-body">
+              <h3>Дебаг карьеры</h3>
+              <p>Разговоры с людьми из IT о карьере, ошибках и выборе.</p>
+              <a class="link" href="#">Открыть YouTube →</a>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-thumb"><div class="play">↗</div></div>
+            <div class="media-body">
+              <h3>Telegram</h3>
+              <p>Работа, психология, книги и то, что происходит между проектами.</p>
+              <a class="link" href="https://t.me/julia_uvarova_psy">Читать канал →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about">
+          <div class="about-photo">Здесь — фото с выступления или второй портрет</div>
+
+          <div>
+            <div class="eyebrow">Обо мне</div>
+            <h2>Юлия Уварова</h2>
+            <p class="lead">IT-психолог, автор книг и подкаста «Дебаг карьеры».</p>
+            <p>9 лет в разработке, 11 лет в психологии. Работаю на стыке человека, карьеры и IT.</p>
+
+            <div class="about-facts">
+              <span class="about-fact">9 лет в разработке</span>
+              <span class="about-fact">11 лет в психологии</span>
+              <span class="about-fact">Автор «Дебаг выгорания»</span>
+              <span class="about-fact">Спикер IT-конференций</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:18px">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <div class="eyebrow" style="color:#fff">Связаться</div>
+            <h2 style="margin-bottom:10px">Есть идея для тренинга, книги или выступления?</h2>
+            <p>Напишите. Обсудим задачу и формат.</p>
+          </div>
+
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://t.me/julia_uvarova_psy">Telegram →</a>
+            <a class="btn btn-secondary" href="mailto:julia.bazhura@yandex.ru">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© Юлия Уварова</div>
+      <div>Книги · Тренинги · Корпоративные проекты · Выступления</div>
+    </div>
+  </footer>
+
+</body>
+</html>
