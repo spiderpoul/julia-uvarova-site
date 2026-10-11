@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#087F86" />
-  <title>Юлия Уварова — Карьера по-человечески</title>
-  <meta name="description" content="Юлия Уварова — IT-психолог, 9 лет в разработке, автор книг. Тренинги для IT-команд, книги, выступления и корпоративные проекты." />
+  <title>Юлия Уварова — IT-психолог, писатель, тренинги и тимбилдинги</title>
+  <meta name="description" content="Юлия Уварова — IT-психолог, писатель: 9 лет в разработке, 11 лет в психологии. Тренинги и тимбилдинги для IT-команд и руководителей, книги и выступления." />
   <style>
     :root{
       --petrol:#087F86;
@@ -379,12 +379,33 @@
     footer{padding:34px 0 46px;color:#6B7D85;font-size:14px}
     .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
+    /* Home: clear B2B offer, authentic event photos and compact slider */
+    .hero h1{font-size:clamp(43px,5.1vw,68px);line-height:1;letter-spacing:-.045em}
+    .hero-visual{padding:0;align-items:stretch}
+    .hero-portrait{display:block;width:100%;height:100%;min-height:520px;object-fit:cover;object-position:center 24%}
+    .hero-note{width:auto;max-width:230px;right:18px;top:auto;bottom:18px;font-size:13px}
+    .company-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn-company-outline{border-color:rgba(255,255,255,.75);background:transparent;color:#fff}
+    .btn-company-outline:hover{background:rgba(255,255,255,.12)}
+    .about-slider{width:100%;max-width:530px;aspect-ratio:4 / 3;min-height:280px;position:relative;overflow:hidden;border-radius:24px;background:#EAF5F3;box-shadow:var(--shadow)}
+    .about-slides{position:absolute;inset:0}
+    .about-slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease}
+    .about-slide.is-active{opacity:1;visibility:visible}
+    .about-slide img{display:block;width:100%;height:100%;object-fit:contain}
+    .about-slide-btn{position:absolute;z-index:2;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;cursor:pointer;background:rgba(255,255,255,.92);color:var(--petrol-dark);font-size:31px;line-height:1;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+    .about-slide-btn.prev{left:12px}
+    .about-slide-btn.next{right:12px}
+    .about-slide-btn:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+    .about-slide-count{position:absolute;z-index:2;right:14px;bottom:12px;background:rgba(20,40,47,.76);color:#fff;border-radius:12px;padding:6px 12px;font-size:13px;font-weight:800}
+
     @media(max-width:960px){
       .nav{display:none}
       .header .btn-primary{display:none}
       .hero-grid,.companies,.about{grid-template-columns:1fr}
       .routes,.books,.media{grid-template-columns:1fr 1fr}
       .hero-visual{min-height:430px}
+      .hero-portrait{min-height:430px}
+      .about-slider{max-width:650px}
       .cta{align-items:flex-start;flex-direction:column}
     }
     @media(max-width:680px){
@@ -393,6 +414,9 @@
       .routes,.books,.media,.company-list{grid-template-columns:1fr}
       .section-head{align-items:flex-start;flex-direction:column}
       .hero-visual{min-height:360px}
+      .hero-portrait{min-height:360px}
+      .hero h1{font-size:clamp(38px,10vw,57px)}
+      .about-slider{min-height:230px}
       .photo-placeholder{width:88%}
       .brand-sub{display:none}
     }
@@ -407,7 +431,7 @@
           <div class="brand-mark">Ю</div>
           <div>
             <div class="brand-name">Юлия Уварова</div>
-            <div class="brand-sub">IT-психолог · автор · 9 лет в разработке</div>
+            <div class="brand-sub">IT-психолог · писатель · 9 лет в разработке</div>
           </div>
         </a>
 
@@ -428,12 +452,12 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Юлия Уварова · IT-психолог · автор</div>
-          <h1><span class="hero-title-accent">Карьера</span><br>по-человечески</h1>
-          <p class="lead">Пишу книги, провожу тренинги и выступаю о работе, управлении, выгорании и жизни вокруг всего этого.</p>
+          <div class="eyebrow">Юлия Уварова · IT-психолог · писатель</div>
+          <h1>Тренинги и<br><span class="hero-title-accent">тимбилдинги</span><br>для IT-команд</h1>
+          <p class="lead">Провожу практические тренинги и тимбилдинги для IT-команд и руководителей. Выступаю на IT-конференциях о карьере, управлении и выгорании. Пишу книги.</p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#companies">Для компаний</a>
+            <a class="btn btn-primary" href="#companies">Тренинги и тимбилдинги</a>
             <a class="btn btn-secondary" href="#books">Книги</a>
             <a class="btn btn-secondary" href="#media">Выступления</a>
           </div>
@@ -441,14 +465,14 @@
           <div class="proofs">
             <span class="proof"><b>9 лет</b> в разработке</span>
             <span class="proof"><b>11 лет</b> в психологии</span>
-            <span class="proof"><b>Автор</b> «Дебаг выгорания»</span>
+            <span class="proof"><b>Писатель</b> · «Дебаг выгорания»</span>
             <span class="proof"><b>Спикер</b> IT-конференций</span>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="hero-note">Работа важна.<br>Но человек — больше работы.</div>
-          <div class="photo-placeholder">Здесь — крупный живой портрет Юлии</div>
+          <img class="hero-portrait" src="trainings/teamlead/assets/image-01.jpg" alt="Юлия Уварова — IT-психолог и ведущая тренингов" fetchpriority="high" />
+          <div class="hero-note">9 лет в IT-разработке.<br>11 лет в психологии.</div>
         </div>
       </div>
     </section>
@@ -459,8 +483,8 @@
           <a class="route" href="#companies">
             <div>
               <span class="route-label">Для компаний</span>
-              <h3>Тренинги и корпоративные проекты</h3>
-              <p>Руководители, команды, выгорание, сложные разговоры, спикеры и книги о компании.</p>
+              <h3>Тренинги и тимбилдинги</h3>
+              <p>Для IT-команд и руководителей: сложные разговоры, делегирование, выгорание, взаимодействие в команде.</p>
             </div>
             <span class="link">Смотреть →</span>
           </a>
@@ -469,7 +493,7 @@
             <div>
               <span class="route-label">Для читателей</span>
               <h3>Книги</h3>
-              <p>«Дебаг выгорания», «Откровения танго-хулиганки» и новая книга о материнстве.</p>
+              <p>«Дебаг выгорания», «Откровения танго-хулиганки» и книга о материнстве, которую сейчас пишу.</p>
             </div>
             <span class="link">Смотреть книги →</span>
           </a>
@@ -477,7 +501,7 @@
           <a class="route" href="#media">
             <div>
               <span class="route-label">Посмотреть в деле</span>
-              <h3>Выступления и «Дебаг карьеры»</h3>
+              <h3>Выступления и подкаст «Дебаг карьеры»</h3>
               <p>Доклады, интервью и разговоры с людьми из IT.</p>
             </div>
             <span class="link">Смотреть →</span>
@@ -491,9 +515,8 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Книги</div>
-            <h2>То, что остаётся после разговора</h2>
+            <h2>Книги о выгорании, отношениях и материнстве</h2>
           </div>
-          <a class="link" href="#">Все книги →</a>
         </div>
 
         <div class="books">
@@ -503,7 +526,7 @@
               <span class="tag">IT · выгорание</span>
               <h3>Дебаг выгорания</h3>
               <p>Для тех, кто устал от работы и пытается понять: это просто тяжёлый период или уже выгорание.</p>
-              <a class="link" href="#">Купить бумажную книгу с автографом →</a>
+              <a class="link" href="https://t.me/julia_uvarova_psy">Уточнить выход книги →</a>
             </div>
           </article>
 
@@ -513,7 +536,7 @@
               <span class="tag">Серия книг</span>
               <h3>Откровения танго-хулиганки</h3>
               <p>Для тех, кто хоть раз влюблялся не в того: любовь, секс, зависимость и выбор без «как правильно». 18+.</p>
-              <a class="link" href="#">Посмотреть серию →</a>
+              <a class="link" href="https://julove-coach.ru/otkroveniya-tango-huliganki-1/" target="_blank" rel="noopener noreferrer">Посмотреть серию и купить →</a>
             </div>
           </article>
 
@@ -523,7 +546,7 @@
               <span class="tag">В работе</span>
               <h3>Книга о материнстве</h3>
               <p>Для тех, кто боится потерять себя в материнстве: от «я не хочу ребёнка» до любви, которой не ожидала.</p>
-              <a class="link" href="#">Узнать о проекте →</a>
+              <a class="link" href="https://t.me/julia_uvarova_psy_cab" target="_blank" rel="noopener noreferrer">Следить за выходом →</a>
             </div>
           </article>
         </div>
@@ -535,14 +558,14 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Для компаний</div>
-            <h2>Тренинги и корпоративные проекты</h2>
+            <h2>Тренинги и тимбилдинги</h2>
           </div>
         </div>
 
         <div class="companies">
           <div class="company-main">
-            <h3 style="font-size:34px">Тренинги для IT-команд и руководителей</h3>
-            <p>Коротко, конкретно, с разбором реальных рабочих ситуаций.</p>
+            <h3 style="font-size:34px">Для IT-команд и руководителей</h3>
+            <p>Практика на примерах из работы: сложные разговоры, конфликты, делегирование, выгорание. Участники разбирают ситуации из своих команд и выбирают, что попробовать после встречи.</p>
 
             <div class="company-list">
               <div class="company-chip">Начинающим тимлидам</div>
@@ -551,16 +574,18 @@
               <div class="company-chip">Подготовка спикеров</div>
             </div>
 
-            <div style="margin-top:24px">
-              <a class="btn btn-primary" href="#">Посмотреть программы →</a>
+            <div class="company-actions">
+              <a class="btn btn-primary" href="trainings/teamlead/">Тренинги для руководителей →</a>
+              <a class="btn btn-company-outline" href="teambuilding/lord-of-the-ring/">Тимбилдинг «Кольцо Раздора» →</a>
             </div>
           </div>
 
           <div class="company-side">
-            <span class="tag">Отдельное направление</span>
-            <h3 style="font-size:32px">Книга о вашей компании</h3>
-            <p>Интервью с сотрудниками, руководителями или основателями → цельная книга про людей, культуру, продукт или историю компании.</p>
-            <a class="link" href="#">Подробнее о корпоративных книгах →</a>
+            <span class="tag">Идея для совместного проекта</span>
+            <h3 style="font-size:32px">Сохранить историю вашей компании в книге</h3>
+            <p>Опыт людей, история команды и важные решения часто остаются только в разговорах. Их можно собрать в книгу — для сотрудников, новых коллег или к юбилею компании.</p>
+            <p>Возьму интервью у сотрудников, руководителей и основателей, а затем подготовлю книгу на основе их историй. Формат и объём обсудим под вашу задачу.</p>
+            <a class="link" href="mailto:julia.bazhura@yandex.ru?subject=%D0%9A%D0%BD%D0%B8%D0%B3%D0%B0%20%D0%BE%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8">Обсудить идею книги →</a>
           </div>
         </div>
       </div>
@@ -581,16 +606,16 @@
             <div class="media-body">
               <h3>Выступления</h3>
               <p>Доклады на IT-конференциях и корпоративных мероприятиях.</p>
-              <a class="link" href="#">Смотреть →</a>
+              <a class="link" href="https://vkvideo.ru/video-119450242_456240409" target="_blank" rel="noopener noreferrer">Смотреть доклад →</a>
             </div>
           </article>
 
           <article class="media-card">
             <div class="media-thumb"><div class="play">▶</div></div>
             <div class="media-body">
-              <h3>Дебаг карьеры</h3>
-              <p>Разговоры с людьми из IT о карьере, ошибках и выборе.</p>
-              <a class="link" href="#">Открыть YouTube →</a>
+              <h3>Подкаст «Дебаг карьеры»</h3>
+              <p>Как специалисты и руководители в IT меняют карьеру, справляются с кризисами и принимают непростые решения. Интервью с реальными историями и выводами гостей.</p>
+              <a class="link" href="https://t.me/julia_uvarova_psy_cab" target="_blank" rel="noopener noreferrer">Смотреть выпуски →</a>
             </div>
           </article>
 
@@ -599,7 +624,7 @@
             <div class="media-body">
               <h3>Telegram</h3>
               <p>Работа, психология, книги и то, что происходит между проектами.</p>
-              <a class="link" href="https://t.me/julia_uvarova_psy">Читать канал →</a>
+              <a class="link" href="https://t.me/julia_uvarova_psy_cab" target="_blank" rel="noopener noreferrer">Читать канал →</a>
             </div>
           </article>
         </div>
@@ -609,20 +634,31 @@
     <section id="about" class="section">
       <div class="container">
         <div class="about">
-          <div class="about-photo">Здесь — фото с выступления или второй портрет</div>
+          <div class="about-slider" data-about-slider aria-roledescription="карусель" aria-label="Фотографии Юлии Уваровой на IT-конференциях и выступлениях">
+            <div class="about-slides">
+              <figure class="about-slide is-active" aria-hidden="false"><img src="trainings/teamlead/assets/image-02.webp" alt="Выступление перед большой IT-аудиторией" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-03.webp" alt="Выступление на открытой IT-площадке" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-04.webp" alt="Доклад в конференц-зале" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-05.webp" alt="Юлия Уварова с микрофоном" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-06.webp" alt="Выступление на IT-конференции" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-07.webp" alt="Юлия Уварова на сцене конференции" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-08.webp" alt="Интервью на IT-конференции" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-09.webp" alt="Панельная дискуссия" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-10.webp" alt="Выступление на открытой площадке" loading="lazy" /></figure>
+              <figure class="about-slide" aria-hidden="true"><img src="trainings/teamlead/assets/image-11.webp" alt="Юлия Уварова выступает с микрофоном" loading="lazy" /></figure>
+            </div>
+            <button class="about-slide-btn prev" type="button" data-prev aria-label="Предыдущее фото">‹</button>
+            <button class="about-slide-btn next" type="button" data-next aria-label="Следующее фото">›</button>
+            <div class="about-slide-count" aria-live="polite"><span data-current>1</span> / 10</div>
+          </div>
 
           <div>
             <div class="eyebrow">Обо мне</div>
             <h2>Юлия Уварова</h2>
-            <p class="lead">IT-психолог, автор книг и подкаста «Дебаг карьеры».</p>
+            <p class="lead">IT-психолог, писатель и ведущая подкаста «Дебаг карьеры».</p>
             <p>9 лет в разработке, 11 лет в психологии. Работаю на стыке человека, карьеры и IT.</p>
-
-            <div class="about-facts">
-              <span class="about-fact">9 лет в разработке</span>
-              <span class="about-fact">11 лет в психологии</span>
-              <span class="about-fact">Автор «Дебаг выгорания»</span>
-              <span class="about-fact">Спикер IT-конференций</span>
-            </div>
+            <p><strong>Выступала на IT-конференциях:</strong> «Стачка», Merge Baltic, Cargo Cult, HolyJS. Провожу тренинги и тимбилдинги с разбором ситуаций из работы команд.</p>
+            <a class="link" href="trainings/teamlead/">Посмотреть программу тренинга →</a>
           </div>
         </div>
       </div>
@@ -633,8 +669,8 @@
         <div class="cta">
           <div>
             <div class="eyebrow" style="color:#fff">Связаться</div>
-            <h2 style="margin-bottom:10px">Есть идея для тренинга, книги или выступления?</h2>
-            <p>Напишите. Обсудим задачу и формат.</p>
+            <h2 style="margin-bottom:10px">Нужен тренинг, тимбилдинг или спикер для IT-команды?</h2>
+            <p>Напишите, кто будет участвовать, какую задачу хотите решить и сколько у вас человек. Обсудим подходящий формат. Идеи для книг тоже можно присылать.</p>
           </div>
 
           <div class="cta-actions">
@@ -650,9 +686,46 @@
   <footer>
     <div class="container footer-row">
       <div>© Юлия Уварова</div>
-      <div>Книги · Тренинги · Корпоративные проекты · Выступления</div>
+      <div>Книги · Тренинги · Тимбилдинги · Выступления</div>
     </div>
   </footer>
 
+<script>
+  (function () {
+    const slider = document.querySelector('[data-about-slider]');
+    if (!slider) return;
+    const slides = Array.from(slider.querySelectorAll('.about-slide'));
+    const count = slider.querySelector('[data-current]');
+    const prev = slider.querySelector('[data-prev]');
+    const next = slider.querySelector('[data-next]');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let active = 0;
+    let userPausedUntil = 0;
+    let touchStart = 0;
+    function show(index, byUser) {
+      active = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        const selected = i === active;
+        slide.classList.toggle('is-active', selected);
+        slide.setAttribute('aria-hidden', String(!selected));
+      });
+      count.textContent = String(active + 1);
+      if (byUser) userPausedUntil = Date.now() + 12000;
+    }
+    prev.addEventListener('click', () => show(active - 1, true));
+    next.addEventListener('click', () => show(active + 1, true));
+    slider.addEventListener('touchstart', e => { touchStart = e.changedTouches[0].screenX; }, {passive:true});
+    slider.addEventListener('touchend', e => {
+      const delta = e.changedTouches[0].screenX - touchStart;
+      if (Math.abs(delta) > 45) show(active + (delta < 0 ? 1 : -1), true);
+    }, {passive:true});
+    if (!reducedMotion) {
+      window.setInterval(() => {
+        if (!document.hidden && Date.now() > userPausedUntil && !slider.matches(':hover') && !slider.matches(':focus-within'))
+          show(active + 1, false);
+      }, 6500);
+    }
+  })();
+</script>
 </body>
 </html>
