@@ -258,6 +258,11 @@
     }
 
     .cover-shell .cover-photo{width:100%;height:100%;display:block;object-fit:contain;border-radius:12px;box-shadow:0 12px 28px rgba(18,53,80,.18)}
+
+    /* Портретное размещение книжной обложки из существующего изображения сайта */
+    .maternity-cover { padding:0; overflow:hidden; border:1px solid #D9E5E4; background:#FFFDF8; }
+    .maternity-cover .cover-photo { width:100%; height:100%; object-fit:cover; object-position:75% center; border-radius:0; box-shadow:none; }
+
     .cover-placeholder {
       display: grid;
       place-items: center;
@@ -873,11 +878,8 @@
         </div>
 
         <article class="book-feature">
-          <div class="cover-shell">
-            <div class="cover-placeholder orange">
-              Место под обложку
-              <small>Книга о материнстве</small>
-            </div>
+          <div class="cover-shell maternity-cover">
+            <img class="cover-photo" src="../assets/ot-straha-k-lyubvi-horizontal.webp" width="960" height="600" alt="Обложка книги «От страха к любви. Мой дневник беременности и материнства»" loading="lazy">
           </div>
 
           <div class="book-copy">
@@ -887,8 +889,8 @@
               <span class="tag orange">психология</span>
             </div>
 
-            <h3>Книга о материнстве</h3>
-            <div class="book-subtitle">Название в работе</div>
+            <h3>От страха к любви</h3>
+            <div class="book-subtitle">Мой дневник беременности и материнства</div>
 
             <div class="why-read">
               <div class="why-read-label">Зачем читать</div>
@@ -1100,7 +1102,7 @@
       <div class="footer-block">
         <div class="footer-title">Книги</div>
         <a href="/books/#work">«Дебаг выгорания»</a><br>
-        <a href="/books/#life">Книга о материнстве</a><br>
+        <a href="/books/#life">«От страха к любви»</a><br>
         <a href="/books/#tango">«Откровения танго-хулиганки»</a>
       </div>
     </div>
