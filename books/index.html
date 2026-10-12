@@ -738,6 +738,21 @@
       .training-card { padding: 28px 24px; border-radius: 26px; }
       .footer-inner { grid-template-columns: 1fr; }
     }
+
+    /* Книжный цикл: реальное горизонтальное фото и семь обложек */
+    .cycle-visual { min-height: 320px; }
+    .cycle-landscape { display:block; width:100%; height:auto; aspect-ratio:640/427; object-fit:contain; border-radius:24px; background:rgba(255,255,255,.06); box-shadow:0 18px 40px rgba(1,43,47,.19); }
+    .series-book { display:block; min-width:0; }
+    a.series-book:focus-visible { outline:3px solid #FFBC8F; outline-offset:6px; border-radius:12px; }
+    .series-cover { position:relative; overflow:hidden; display:block; width:100%; aspect-ratio:2/3; border-style:solid; background:rgba(255,255,255,.10); }
+    .series-cover img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+    .series-cover img.coming-art { object-fit:cover; }
+    .series-book .series-number { display:block; font-size:11px; font-weight:800; opacity:.78; text-align:left; margin-top:12px; color:#D8F0EF; }
+    .series-book .series-name { display:block; font-size:13px; font-weight:800; text-align:left; color:#fff; line-height:1.3; margin-top:3px; }
+    .series-book .series-state { display:inline-block; margin-top:6px; color:#ffd2bc; font-size:11px; font-weight:800; }
+    .series-book:hover .series-cover { background:rgba(255,255,255,.19); }
+    @media (max-width:980px) { .cycle-visual { min-height:260px; } }
+    @media (max-width:680px) { .cycle-visual { min-height:auto; } .cycle-landscape { border-radius:16px; } .series-books { grid-template-columns:repeat(2,minmax(0,1fr)); } .series-book .series-name { font-size:14px; } }
   </style>
 </head>
 
@@ -916,16 +931,8 @@
       <div class="container">
         <div class="cycle-hero">
           <div class="cycle-grid">
-            <div class="cycle-visual" aria-label="Место под семь обложек цикла">
-              <div class="book-stack">
-                <div class="mini-cover">Обложка<br>1</div>
-                <div class="mini-cover">Обложка<br>2</div>
-                <div class="mini-cover">Обложка<br>3</div>
-                <div class="mini-cover">Обложка<br>4</div>
-                <div class="mini-cover">Обложка<br>5</div>
-                <div class="mini-cover">Обложка<br>6</div>
-                <div class="mini-cover">Обложка<br>7</div>
-              </div>
+            <div class="cycle-visual">
+              <img class="cycle-landscape" src="/assets/otkroveniya-tango-huliganki-series.avif" width="640" height="427" loading="lazy" alt="Три выпущенные книги цикла «Откровения танго-хулиганки» на горизонтальном фото">
             </div>
 
             <div class="cycle-copy">
@@ -961,7 +968,7 @@
               </p>
 
               <div class="cycle-actions">
-                <a class="btn primary" href="https://julove-coach.ru/otkroveniya-tango-huliganki-1/">Посмотреть первую книгу →</a>
+                <a class="btn primary" href="/books/tango-1/">Посмотреть первую книгу →</a>
                 <a class="btn ghost" href="#tango-books">Все 7 книг ↓</a>
               </div>
             </div>
@@ -977,39 +984,53 @@
             </div>
 
             <div class="series-books">
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 1</span>
+              <a class="series-book" href="/books/tango-1/" aria-label="Подробнее о книге 1: Под звуки скрипки">
+                <div class="series-cover"><img class="released-art" src="https://julove-coach.ru/wp-content/uploads/2024/02/1708192462-1024x944.png" loading="lazy" alt="Обложка книги «Откровения танго-хулиганки. Под звуки скрипки»"></div>
+                <span class="series-number">КНИГА 1 / 7</span>
+                <span class="series-name">Под звуки скрипки</span>
+                <span class="series-state">Подробнее →</span>
+              </a>
+
+              <a class="series-book" href="/books/tango-2/" aria-label="Подробнее о книге 2: Как разгоралось пламя">
+                <div class="series-cover"><img class="released-art" src="https://julove-coach.ru/wp-content/uploads/2025/01/1736975248-1024x944.png" loading="lazy" alt="Обложка книги «Откровения танго-хулиганки. Как разгоралось пламя»"></div>
+                <span class="series-number">КНИГА 2 / 7</span>
+                <span class="series-name">Как разгоралось пламя</span>
+                <span class="series-state">Подробнее →</span>
+              </a>
+
+              <a class="series-book" href="/books/tango-3/" aria-label="Подробнее о книге 3: В жерле вулкана">
+                <div class="series-cover"><img class="released-art" src="https://julove-coach.ru/wp-content/uploads/2025/01/1737648765-1024x944.png" loading="lazy" alt="Обложка книги «Откровения танго-хулиганки. В жерле вулкана»"></div>
+                <span class="series-number">КНИГА 3 / 7</span>
+                <span class="series-name">В жерле вулкана</span>
+                <span class="series-state">Подробнее →</span>
+              </a>
+
+              <div class="series-book" aria-label="Книга 4: Танцующая на кинжалах. Скоро">
+                <div class="series-cover"><img class="coming-art" src="/assets/tango-coming-soon.svg" loading="lazy" alt="Скоро: новая часть цикла"></div>
+                <span class="series-number">КНИГА 4 / 7</span>
+                <span class="series-name">Танцующая на кинжалах</span>
+                <span class="series-state">Скоро</span>
               </div>
 
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 2</span>
+              <div class="series-book" aria-label="Книга 5: В поисках забвения. Скоро">
+                <div class="series-cover"><img class="coming-art" src="/assets/tango-coming-soon.svg" loading="lazy" alt="Скоро: новая часть цикла"></div>
+                <span class="series-number">КНИГА 5 / 7</span>
+                <span class="series-name">В поисках забвения</span>
+                <span class="series-state">Скоро</span>
               </div>
 
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 3</span>
+              <div class="series-book" aria-label="Книга 6: С закрытыми глазами. Скоро">
+                <div class="series-cover"><img class="coming-art" src="/assets/tango-coming-soon.svg" loading="lazy" alt="Скоро: новая часть цикла"></div>
+                <span class="series-number">КНИГА 6 / 7</span>
+                <span class="series-name">С закрытыми глазами</span>
+                <span class="series-state">Скоро</span>
               </div>
 
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 4</span>
-              </div>
-
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 5</span>
-              </div>
-
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 6</span>
-              </div>
-
-              <div class="series-book">
-                <div class="series-cover">Место<br>под обложку</div>
-                <span>Книга 7</span>
+              <div class="series-book" aria-label="Книга 7: Нежность шелка. Скоро">
+                <div class="series-cover"><img class="coming-art" src="/assets/tango-coming-soon.svg" loading="lazy" alt="Скоро: новая часть цикла"></div>
+                <span class="series-number">КНИГА 7 / 7</span>
+                <span class="series-name">Нежность шелка</span>
+                <span class="series-state">Скоро</span>
               </div>
             </div>
           </div>
