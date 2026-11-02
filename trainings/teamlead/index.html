@@ -347,6 +347,21 @@ footer{color:#71838B}
 #live-format .live-dots .live-dot.active{min-width:11px!important;min-height:11px!important;width:11px!important;height:11px!important;background:var(--petrol)!important;transform:none!important}
 }
 @media(prefers-reduced-motion:reduce){#live-format .live-slides{scroll-behavior:auto!important}}
+
+/* Route visitors from the detailed workshop to the complete training program */
+.program-invite{padding:30px 0 56px}
+.program-invite-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:34px;align-items:center;background:linear-gradient(135deg,#e9f8f6,#f7fffa);border:1px solid #cee6e4;border-radius:28px;padding:36px 40px}
+.program-invite-eyebrow{display:block;color:#087F86;text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:12px}
+.program-invite h2{font-size:clamp(28px,3.2vw,41px);line-height:1.13;letter-spacing:-.035em;margin:0 0 12px}
+.program-invite p{color:#526b73;max-width:700px;margin:0 0 15px;line-height:1.6}
+.program-invite-topics{display:flex;flex-wrap:wrap;gap:8px}
+.program-invite-topics span{padding:7px 11px;background:#fff;border:1px solid #d8e9e7;border-radius:30px;font-size:12px;color:#355d63;font-weight:700}
+.program-invite-actions{display:flex;flex-direction:column;align-items:stretch;gap:16px}
+.program-invite-actions .btn{background:#087F86;white-space:nowrap}
+.program-invite-actions .btn:hover{background:#06656c}
+.program-invite-sub{color:#087F86;font-size:13px;font-weight:850;text-align:center;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:850px){.program-invite-inner{grid-template-columns:1fr}.program-invite-actions{align-items:flex-start}}
+@media(max-width:620px){.program-invite-inner{padding:26px 21px}.program-invite-actions,.program-invite-actions .btn{width:100%}.program-invite{padding:20px 0 45px}}
 </style>
 </head>
 <body>
@@ -442,6 +457,15 @@ footer{color:#71838B}
 <section><div class="container"><div class="section-head"><h2>Как проходит работа</h2></div><div class="steps"><article class="step"><div class="step-num">01 / ЗНАКОМИМСЯ</div><h3>Бесплатный созвон</h3><p>Обсуждаем, что сейчас происходит в команде. Не нужно заранее формулировать тему тренинга.</p></article><article class="step"><div class="step-num">02 / СОБИРАЮ</div><h3>Программа под ваш запрос</h3><p>Кейсы, упражнения, теория и практика — только то, что нужно конкретно вашей ситуации.</p></article><article class="step"><div class="step-num">03 / ПРОВОДИМ</div><h3>От 2 часов</h3><p>Онлайн или офлайн. Возможен выезд в ваш офис по Москве.</p></article></div></div></section>
 
 <section><div class="container"><div class="price-box"><div><h2>Стоимость</h2><p>В стоимость входит предварительный созвон, анализ запроса и разработка программы под вашу команду.</p></div><div class="price">от 10 000 ₽ / час<small>минимум 2 часа</small></div></div></div></section>
+
+<section class="program-invite" aria-labelledby="program-invite-heading"><div class="container"><div class="program-invite-inner">
+  <div class="program-invite-copy"><span class="program-invite-eyebrow">Продолжить обучение руководителей</span>
+    <h2 id="program-invite-heading">Ещё девять тем для ваших тимлидов</h2>
+    <p>Этот тренинг можно провести отдельно или включить в программу развития руководителей. В каталоге есть занятия по делегированию, обратной связи, сложным сотрудникам, переговорам, конфликтам и договорённостям.</p>
+    <div class="program-invite-topics"><span>5 базовых тренингов</span><span>5 углублённых тем</span><span>Один тренинг или вся программа</span></div>
+  </div>
+  <div class="program-invite-actions"><a class="btn primary" href="../">Посмотреть все тренинги →</a><a class="program-invite-sub" href="#contact">Обсудить обучение команды →</a></div>
+</div></div></section>
 
 <section id="contact"><div class="container contact"><div class="contact-copy"><h2>Есть ситуация, которую давно пора разобрать?</h2><p>Расскажите, что сейчас сложнее всего: делегирование, конфликт, разговор с сотрудником или перегруз команды. Начнём с вашей реальной ситуации.</p></div><div class="contact-card"><h3>Начнём с короткого бесплатного созвона</h3><p>Напишите мне в Telegram и буквально в нескольких фразах опишите ситуацию.</p><a class="btn primary" href="https://t.me/julia_uvarova_psy" target="_blank" rel="noopener">Написать Юле в Telegram →</a><p class="telegram-fallback">Если кнопка не работает, найдите меня по нику: <a href="https://t.me/julia_uvarova_psy" target="_blank" rel="noopener">@julia_uvarova_psy</a></p></div></div></section>
 </main>
