@@ -29,17 +29,36 @@
 @media(max-width:620px){.wrap{width:min(100% - 30px,1140px)}.section{padding:58px 0}.hero{padding:45px 0 58px}.hero p{font-size:17px}.hero-visual img{height:330px}.hero-badge strong{font-size:31px}.hero-badge{padding:14px}.feature{padding:27px;gap:12px}.feature-side{padding:20px}.program-head{display:block}.program-meta{display:inline-block;margin-top:16px}.cards,.more-grid,.steps{grid-template-columns:1fr}.topic{min-height:0;padding:23px}.program-footer{align-items:stretch;flex-direction:column}.about{grid-template-columns:1fr}.about img{width:100%;height:250px;object-position:center 24%}.cta{padding:32px 26px;grid-template-columns:1fr}.cta-actions{width:100%}.footer-inner{display:block}.footer-links{margin-top:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.topic{transition:none}}
 
-/* Make the detailed flagship workshop immediately discoverable */
-.hero-badge{transition:box-shadow .2s ease,transform .2s ease}
-.hero-badge:hover{box-shadow:0 12px 28px rgba(0,0,0,.17);transform:translateY(-2px)}
-.hero-badge strong{font-size:30px;white-space:nowrap}
-#flagship{padding-top:20px;padding-bottom:68px}
-#start{padding-top:65px}
-.feature-reviews{display:inline-block;margin-top:22px;color:#fff;font-size:13px;font-weight:800;text-decoration:underline;text-underline-offset:4px}
-.feature-reviews:hover{color:#d4f7f3}
-.mini{display:flex;flex-direction:column;align-items:flex-start}
-.mini .text-link{margin-top:auto;padding-top:17px}
-@media(max-width:620px){#flagship{padding-top:10px;padding-bottom:55px}#start{padding-top:55px}.hero-actions .btn{width:100%;white-space:normal}.hero-badge{left:14px;right:14px;bottom:14px}.hero-badge span{font-size:12px}}
+
+/* Catalogue entry: two routes without duplicated sales blocks */
+.catalog-hero{padding:70px 0 78px;background:radial-gradient(ellipse at 95% 2%,rgba(40,188,235,.12),transparent 42%),var(--milk)}
+.catalog-hero-intro{max-width:850px;margin-bottom:31px}
+.catalog-hero-intro h1{font-size:clamp(41px,5.1vw,67px);letter-spacing:-.052em;line-height:1.08}
+.catalog-hero-intro h1 em{font-style:normal;color:var(--petrol)}
+.catalog-hero-intro p{font-size:18px;line-height:1.6;color:var(--muted);max-width:750px;margin-top:17px}
+.entry-cards{display:grid;grid-template-columns:1.06fr .94fr;gap:18px}
+.entry-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;min-height:326px;padding:32px 34px;border-radius:24px;box-shadow:0 12px 38px rgba(19,75,82,.055)}
+.entry-card-first{background:linear-gradient(135deg,#087F86,#06656c);color:#fff}
+.entry-card-program{background:#fff;border:1px solid var(--line)}
+.entry-kicker{font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--petrol)}
+.entry-card-first .entry-kicker{color:#c6f5f1}
+.entry-card h2{font-size:clamp(27px,3vw,36px);line-height:1.15;letter-spacing:-.04em;margin:12px 0 12px}
+.entry-card p{font-size:15px;line-height:1.6;color:var(--muted);max-width:510px}
+.entry-card-first p{color:#e1f8f6}
+.entry-meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 24px}
+.entry-meta span{border:1px solid #d5e7e6;color:#42646a;background:#f4faf9;padding:6px 10px;font-size:12px;font-weight:750;border-radius:30px}
+.entry-card-first .entry-meta span{border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.11);color:#fff}
+.entry-link{margin-top:auto;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px;border-radius:11px;background:var(--petrol);color:#fff;font-size:14px;font-weight:850;text-decoration:none}
+.entry-link:hover{background:var(--dark)}
+.entry-card-first .entry-link{background:#fff;color:var(--dark)}
+.entry-card-first .entry-link:hover{background:#e0f6f2}
+.catalog-hero-note{margin-top:18px;color:var(--muted);font-size:13px}
+.outcome{border-top:1px solid var(--line);padding-top:14px;margin-top:13px;display:grid;gap:4px;font-size:13px;line-height:1.55}
+.outcome b{color:var(--dark);font-size:12px}
+.outcome span{color:#405e66}
+#basic{scroll-margin-top:80px}
+@media(max-width:980px){.entry-cards{grid-template-columns:1fr}.entry-card{min-height:0}.catalog-hero{padding:54px 0 67px}}
+@media(max-width:620px){.catalog-hero{padding:42px 0 54px}.catalog-hero-intro{margin-bottom:25px}.catalog-hero-intro p{font-size:16px}.entry-card{padding:26px 22px;border-radius:20px}.entry-card h2{font-size:28px}.entry-link{width:100%;justify-content:center}.catalog-hero-note{font-size:12px}}
 </style>
 </head>
 <body>
@@ -47,66 +66,69 @@
 <a class="brand" href="../" aria-label="На главную страницу Юлии Уваровой"><span class="brand-mark">Ю</span><span>Юлия Уварова<small>IT-психолог · тренер · 9 лет в разработке</small></span></a>
 <button class="menu" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Открыть меню">☰</button>
 <nav class="nav" id="navigation" aria-label="Навигация по странице">
-<a href="#flagship">Первый тренинг</a><a href="#basic">Начинающим</a><a href="#advanced">Опытным</a><a href="#teams">Командам</a><a href="#format">Форматы</a><a href="../">Главная</a>
+<a href="#start">С чего начать</a><a href="#basic">Начинающим</a><a href="#advanced">Опытным</a><a href="#teams">Командам</a><a href="#format">Форматы</a><a href="../">Главная</a>
 </nav><a class="btn btn-orange" href="#contact">Обсудить обучение ↗</a>
 </div></header>
 <main>
-<section class="hero"><div class="wrap hero-grid"><div>
-<div class="eyebrow">Корпоративное обучение · IT</div>
-<h1>Тренинги для <em>тимлидов и IT-команд</em></h1>
-<p>Делегирование, сложные разговоры, конфликты, переговоры и ответственность команды. Выберите один готовый тренинг или последовательную программу развития руководителей.</p>
-<div class="hero-actions"><a class="btn btn-orange" href="teamlead/">Подробнее о тренинге «Команда есть…» ↗</a><a class="btn btn-outline" href="#basic">Все 10 тем обучения ↓</a></div>
-<div class="hero-note">Практика на рабочих ситуациях · онлайн или очно · для корпоративных групп</div>
-</div><div class="hero-visual">
-<img src="teamlead/assets/image-04.webp" width="1280" height="853" alt="Юлия Уварова выступает перед участниками IT-конференции">
-<a class="hero-badge" href="teamlead/" aria-label="Подробнее о тренинге Команда есть. А всё снова на вас?"><strong>2 ч</strong><span>«Команда есть. А всё снова на вас?»<br>Программа, кейсы и отзывы ↗</span></a>
-</div></div></section>
-<section class="section" id="flagship"><div class="wrap"><div class="feature">
-<div><div class="eyebrow">Практический тренинг · от 2 часов</div><h2>«Команда есть.<br>А всё снова на вас?»</h2>
-<p>Сотрудники приходят с одними и теми же вопросами, согласования затягиваются, конфликты приходится разруливать самому руководителю. На занятии разбираем, что именно происходит в вашей команде и как вернуть людям самостоятельность.</p>
-<div class="feature-tags"><span>Для начинающих и опытных тимлидов</span><span>Можно начать с 2 часов</span><span>Рабочие кейсы</span></div>
-<a class="btn btn-white" href="teamlead/">Программа, кейсы и отзывы ↗</a>
-</div>
-<div class="feature-side"><strong>Какие ситуации можно взять на первое занятие</strong>
-<ul><li>«Если я не проконтролирую, всё развалится»</li><li>«Сильный сотрудник постоянно спорит»</li><li>«Договорились на встрече, а потом всё по-старому»</li><li>«Хочу поговорить с человеком, но откладываю»</li></ul><a class="feature-reviews" href="teamlead/#cases">Посмотреть кейсы и отзывы участников ↗</a></div>
-</div></div></section>
-<section class="section section-alt" id="start"><div class="wrap">
-<div class="section-head"><div class="eyebrow">Выберите формат</div><h2>Один тренинг или полноценная программа</h2><p>Можно начать с конкретной рабочей ситуации, выбрать пять базовых тем или пройти все десять занятий.</p></div>
-<div class="mini-cards">
-<article class="mini"><span class="num">01 / ОДИН ТРЕНИНГ</span><b>Начните с двух часов</b><p>«Команда есть. А всё снова на вас?» — готовый практический тренинг с разбором ваших рабочих ситуаций.</p><a class="text-link" href="teamlead/">Посмотреть тренинг ↗</a></article>
-<article class="mini"><span class="num">02 / БАЗОВАЯ ПРОГРАММА</span><b>5 тренингов для начинающих</b><p>Основные управленческие навыки: роль тимлида, делегирование, встречи 1:1, обратная связь и сложные разговоры.</p><a class="text-link" href="#basic">Посмотреть программу ↗</a></article>
-<article class="mini"><span class="num">03 / ПОЛНАЯ ПРОГРАММА</span><b>10 тренингов для руководителей</b><p>Пять базовых тем плюс сложные сотрудники, ответственность команды, договорённости, переговоры и конфликты.</p><a class="text-link" href="#advanced">Посмотреть все темы ↗</a></article>
-</div></div></section>
+<section class="catalog-hero" id="start"><div class="wrap">
+  <div class="catalog-hero-intro">
+    <div class="eyebrow">Корпоративное обучение · IT</div>
+    <h1>Тренинги для <em>тимлидов и IT-команд</em></h1>
+    <p>Сложные разговоры, делегирование, конфликты и переговоры. Практические занятия по рабочим ситуациям руководителей.</p>
+  </div>
+  <div class="entry-cards" aria-label="Выберите формат обучения">
+    <article class="entry-card entry-card-first">
+      <span class="entry-kicker">01 / С чего начать</span>
+      <h2>Команда есть.<br>А всё снова на вас?</h2>
+      <p>Сложные сотрудники, бесконечные согласования, конфликты. Практический тренинг, на котором разбираем ситуации из вашей команды и ищем решения.</p>
+      <div class="entry-meta"><span>От 2 часов</span><span>Для начинающих и опытных тимлидов</span></div>
+      <a class="entry-link" href="teamlead/">Программа, кейсы и отзывы <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="entry-card entry-card-program">
+      <span class="entry-kicker">02 / Системное обучение</span>
+      <h2>Программа развития тимлидов</h2>
+      <p>5 или 10 тематических тренингов. Можно пройти всю программу или выбрать отдельные занятия по актуальным задачам руководителей.</p>
+      <div class="entry-meta"><span>5 базовых тем</span><span>5 углублённых тем</span></div>
+      <a class="entry-link" href="#basic">Посмотреть все темы <span aria-hidden="true">↓</span></a>
+    </article>
+  </div>
+  <div class="catalog-hero-note">Корпоративные группы · онлайн и очно · практика на реальных ситуациях</div>
+</div></section>
 <section class="section section-alt" id="basic"><div class="wrap">
 <div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 01 · первые пять занятий</div><h2>Тимлид: работа с людьми</h2><p>Для разработчиков, тестировщиков и других IT-специалистов, которые недавно стали руководителями. Пять практических занятий дают основу для повседневной управленческой работы.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
 <div class="cards"><article class="topic" id="topic-01">
   <div class="topic-top"><span class="topic-number">01</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Первая управленческая роль</div><h3>Из разработчика — в тимлиды</h3><p>Что изменилось в вашей работе, как выстроить отношения с бывшими коллегами, где заканчивается личная ответственность и начинается ответственность команды.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Участники разбирают первые управленческие решения, формулируют свои границы и ожидания от команды.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет обозначить границы своей роли, договориться с командой об ожиданиях и выбрать первые управленческие действия.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-02">
   <div class="topic-top"><span class="topic-number">02</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Задачи и самостоятельность</div><h3>Делегировать и не переделывать</h3><p>Как передавать задачу, договариваться о результате, проверять прогресс и не забирать работу обратно после первой ошибки.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Тренируем постановку задачи и точки контроля на знакомых IT-ситуациях.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет ставить задачи с понятным результатом, назначать контрольные точки и оставлять сотруднику пространство для решений.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-03">
   <div class="topic-top"><span class="topic-number">03</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Регулярные встречи</div><h3>1:1, после которых что-то меняется</h3><p>Как узнать, что мешает сотруднику работать, обсуждать рост, мотивацию и договорённости без формального «ну как дела?».</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Отрабатываем вопросы и структуру встречи с сотрудником.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет проводить 1:1, на которых обсуждаются трудности, развитие и следующие конкретные шаги.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-04">
   <div class="topic-top"><span class="topic-number">04</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Поведение и результаты</div><h3>Обратная связь без напряжения</h3><p>Как говорить о качестве работы, сроках и поведении, чтобы человек понимал, что именно нужно изменить.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Участники готовят и проводят разговор по конкретной ситуации.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет объяснять, что нужно изменить в работе или поведении, и договариваться о следующих действиях.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-05">
   <div class="topic-top"><span class="topic-number">05</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Неприятные темы</div><h3>Сложные разговоры с сотрудниками</h3><p>Сотрудник срывает договорённости, спорит с решениями, обижается на замечания или не справляется с ролью. Как подготовиться и провести разговор.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Разбираем реальные диалоги и тренируем начало, вопросы и завершение разговора.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет подготовить непростой разговор, задать важные вопросы и завершить встречу ясными договорённостями.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article></div>
 <div class="program-footer"><div><strong>Можно заказать всю программу или отдельную тему</strong><p>Между занятиями — небольшие задания на реальных рабочих ситуациях. На следующей встрече разбираем, что получилось.</p></div><a class="btn btn-orange" href="#contact">Обсудить программу ↗</a></div>
@@ -117,30 +139,35 @@
   <div class="topic-top"><span class="topic-number">06</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Ответственность в команде</div><h3>Команда есть. А всё снова на вас?</h3><p>Задачи и решения постоянно возвращаются к руководителю. Ищем, где возникает зависимость от него и как изменить привычный способ работы.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Разбор повторяющейся ситуации и конкретных действий руководителя.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет заметить, где решения постоянно возвращаются к нему, и выбрать способы повышать самостоятельность команды.</span></div>
   <div class="topic-actions"><a class="text-link" href="teamlead/">Подробнее о тренинге ↗</a></div>
  </article>
 <article class="topic" id="topic-07">
   <div class="topic-top"><span class="topic-number">07</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Сложные сотрудники</div><h3>Сильный, но сложный сотрудник</h3><p>Ключевой специалист спорит со всеми, нарушает договорённости или подрывает решения. Как сохранить рабочий разговор и обозначить границы.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Тренируем встречу с сильным сотрудником и последовательность следующих шагов.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет обсуждать с сильным сотрудником проблемное поведение, обозначать границы и фиксировать договорённости.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-08">
   <div class="topic-top"><span class="topic-number">08</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Договорённости без бесконечных согласований</div><h3>Договоримся</h3><p>У задач несколько владельцев, ожидания не совпадают, решения забываются. Как договариваться о правилах совместной работы.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Команда составляет рабочие договорённости: кто решает, кто участвует, когда нужно согласование.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет организовать обсуждение зон ответственности, правил согласования и способов принимать общие решения.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-09">
   <div class="topic-top"><span class="topic-number">09</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Ресурсы, сроки, приоритеты</div><h3>Сложные переговоры</h3><p>Как вести разговор с заказчиком, продуктом, соседней командой или своим руководителем, когда интересы расходятся.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Практикуем переговоры о сроках, объёме работ и ответственности.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет вести переговоры о сроках, приоритетах и ресурсах, предлагая понятные варианты вместо взаимных претензий.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article>
 <article class="topic" id="topic-10">
   <div class="topic-top"><span class="topic-number">10</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Напряжение между людьми</div><h3>Конфликт в команде: что делать руководителю</h3><p>Два сильных специалиста не могут договориться, спор перешёл на личности, остальная команда избегает темы. Как разобраться без поиска виноватого.</p>
   <div class="practice"><b>Что делаем на занятии</b><span>Тренируем разговор с участниками конфликта и совместную встречу.</span></div>
+  <div class="outcome"><b>После тренинга</b><span>Сможет разобраться в причинах конфликта и провести разговор с участниками без обвинений и поспешных выводов.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact">Обсудить этот тренинг ↗</a></div>
  </article></div>
 <div class="program-footer"><div><strong>Можно пройти 5 углублённых тем или все 10</strong><p>Полная программа: 30 часов практики, задания между встречами и разбор изменений в работе.</p></div><a class="btn btn-orange" href="#contact">Собрать программу ↗</a></div>
