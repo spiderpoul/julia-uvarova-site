@@ -27,24 +27,24 @@
 #site-nav .unav-panel-link{display:block;padding:7px 8px;margin-left:-8px;border-radius:8px;font-size:13px;line-height:1.42;font-weight:550;white-space:normal}
 #site-nav .unav-panel-link:hover,#site-nav .unav-panel-link[aria-current=page]{color:#087f86;background:#eaf7f5}
 #site-nav a:focus-visible,#site-nav button:focus-visible{outline:3px solid #28bceb;outline-offset:3px}
-#site-breadcrumbs{display:block;position:relative;width:100%;margin:0;padding:11px 24px 0;min-height:33px;background:transparent;border:0;box-shadow:none;z-index:1;font:500 12px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#60747b}
+#site-breadcrumbs{display:block;position:relative;backdrop-filter:none;-webkit-backdrop-filter:none;width:100%;margin:0;padding:11px 24px 0;min-height:33px;background:transparent;border:0;box-shadow:none;z-index:1;font:500 12px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#60747b}
 #site-breadcrumbs .unav-crumbs-inner{max-width:1188px;margin:0 auto;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 #site-breadcrumbs a{color:#087f86!important;text-decoration:none;font-size:inherit;font-weight:600}
 #site-breadcrumbs a:hover{text-decoration:underline}
 #site-breadcrumbs .unav-crumb-separator{opacity:.65}
 body.unav-equipped.unav-page-home > header.header-shell,
-body.unav-equipped.unav-page-books > nav,
+body.unav-equipped.unav-page-books > nav:not(#site-breadcrumbs),
 body.unav-equipped.unav-page-tango > header,
 body.unav-equipped.unav-page-service > header.head{display:none!important}
 body.unav-equipped.unav-page-trainings > header.header{top:var(--unav-height);z-index:60}
-body.unav-equipped.unav-page-teamlead > nav{top:var(--unav-height);z-index:60}
+body.unav-equipped.unav-page-teamlead > nav:not(#site-breadcrumbs){top:var(--unav-height);z-index:60}
 body.unav-equipped.unav-page-teambuilding > header{top:var(--unav-height);z-index:60}
 body.unav-equipped.unav-page-trainings > header.header .brand,
 body.unav-equipped.unav-page-teamlead > nav .brand{display:none!important}
 .unav-local-label{flex:0 0 auto;font:700 12px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#087f86;white-space:nowrap}
 body.unav-equipped.unav-page-teambuilding #site-breadcrumbs{background:#061f29;color:#d0e5e5;padding-bottom:8px}
 body.unav-equipped.unav-page-teambuilding #site-breadcrumbs a{color:#65d1d4!important}
-.unav-footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:9px 22px;max-width:1200px;margin:18px auto 0;padding:16px 20px 0;border-top:1px solid rgba(128,156,159,.3);font:600 13px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.unav-footer-links{display:flex;position:static!important;top:auto!important;left:auto!important;right:auto!important;width:auto!important;height:auto!important;z-index:auto!important;transform:none!important;background:transparent;backdrop-filter:none;justify-content:center;flex-wrap:wrap;gap:9px 22px;max-width:1200px;margin:18px auto 0;padding:16px 20px 0;border-top:1px solid rgba(128,156,159,.3);font:600 13px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
 .unav-footer-links a{color:#087f86!important;text-decoration:none}
 .unav-footer-links a:hover{text-decoration:underline}
 @media(max-width:870px){
