@@ -1,0 +1,74 @@
+/* Единая навигация сайта Юлии Уваровой */
+:root{--unav-height:64px}
+#site-nav,#site-nav *{box-sizing:border-box}
+#site-nav{position:sticky;top:0;z-index:9999;width:100%;height:var(--unav-height);background:rgba(255,249,243,.97);border-bottom:1px solid #d9e8e7;box-shadow:0 2px 14px rgba(25,65,75,.05);color:#243746;font:500 14px/1.4 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+#site-nav .unav-inner{position:relative;max-width:1240px;height:100%;margin:0 auto;padding:0 26px;display:flex;align-items:center;gap:26px}
+#site-nav a{color:inherit;text-decoration:none;border:0;box-shadow:none}
+#site-nav button{font:inherit;appearance:none;-webkit-appearance:none}
+#site-nav .unav-brand{flex:0 0 auto;display:inline-flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.018em;font-size:16px;white-space:nowrap}
+#site-nav .unav-brand-mark{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:#087f86;color:#fff;font-size:15px;font-weight:800}
+#site-nav .unav-primary{position:static;display:flex;flex:1;align-items:center;justify-content:flex-end;gap:26px;min-width:0;width:auto;height:auto;margin:0;padding:0;background:transparent;border:0;box-shadow:none;transform:none}
+#site-nav .unav-primary a{position:relative;display:inline-block;padding:10px 0;font-size:13px;font-weight:700;white-space:nowrap}
+#site-nav .unav-primary a:hover,#site-nav .unav-primary a.unav-active,#site-nav .unav-primary a[aria-current=page]{color:#087f86}
+#site-nav .unav-primary a.unav-active::after,#site-nav .unav-primary a[aria-current=page]::after{content:"";position:absolute;height:2px;left:0;right:0;bottom:5px;border-radius:2px;background:#087f86}
+#site-nav .unav-menu-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex:0 0 auto;min-height:37px;border:1px solid #d0dfdf;border-radius:11px;background:#fff;color:#243746;padding:8px 13px;cursor:pointer;font-weight:750;font-size:13px;white-space:nowrap;box-shadow:none;line-height:1}
+#site-nav .unav-menu-button:hover,#site-nav.unav-open .unav-menu-button{border-color:#087f86;background:#f0fbf9;color:#087f86}
+#site-nav .unav-hamburger{display:flex;width:17px;height:15px;flex-direction:column;justify-content:space-between}
+#site-nav .unav-hamburger span{display:block;width:100%;height:2px;background:currentColor;border-radius:2px}
+#site-nav .unav-panel[hidden]{display:none!important}
+#site-nav .unav-panel{position:absolute;top:calc(100% + 7px);right:26px;width:min(790px,calc(100vw - 28px));max-height:min(80vh,750px);max-height:min(80dvh,750px);overflow-y:auto;overscroll-behavior:contain;background:#fffdfb;border:1px solid #d9e8e7;border-radius:18px;box-shadow:0 22px 64px rgba(15,50,58,.18);color:#243746;padding:22px 24px 26px}
+#site-nav .unav-panel-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:16px;margin-bottom:17px;border-bottom:1px solid #e4eeee}
+#site-nav .unav-panel-heading{font-size:16px;font-weight:800;letter-spacing:-.01em}
+#site-nav .unav-panel-home{font-size:12px;font-weight:750;color:#087f86}
+#site-nav .unav-panel-grid{display:grid;grid-template-columns:1.25fr 1.1fr .8fr;gap:25px}
+#site-nav .unav-group{margin:0;padding:0;background:none;border:0;min-width:0}
+#site-nav .unav-group-title{margin:0 0 12px;color:#087f86;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.07em}
+#site-nav .unav-group-links{display:flex;flex-direction:column;gap:3px}
+#site-nav .unav-panel-link{display:block;padding:7px 8px;margin-left:-8px;border-radius:8px;font-size:13px;line-height:1.42;font-weight:550;white-space:normal}
+#site-nav .unav-panel-link:hover,#site-nav .unav-panel-link[aria-current=page]{color:#087f86;background:#eaf7f5}
+#site-nav a:focus-visible,#site-nav button:focus-visible{outline:3px solid #28bceb;outline-offset:3px}
+#site-breadcrumbs{display:block;position:relative;width:100%;margin:0;padding:11px 24px 0;min-height:33px;background:transparent;border:0;box-shadow:none;z-index:1;font:500 12px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#60747b}
+#site-breadcrumbs .unav-crumbs-inner{max-width:1188px;margin:0 auto;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+#site-breadcrumbs a{color:#087f86!important;text-decoration:none;font-size:inherit;font-weight:600}
+#site-breadcrumbs a:hover{text-decoration:underline}
+#site-breadcrumbs .unav-crumb-separator{opacity:.65}
+body.unav-equipped.unav-page-home > header.header-shell,
+body.unav-equipped.unav-page-books > nav,
+body.unav-equipped.unav-page-tango > header,
+body.unav-equipped.unav-page-service > header.head{display:none!important}
+body.unav-equipped.unav-page-trainings > header.header{top:var(--unav-height);z-index:60}
+body.unav-equipped.unav-page-teamlead > nav{top:var(--unav-height);z-index:60}
+body.unav-equipped.unav-page-teambuilding > header{top:var(--unav-height);z-index:60}
+body.unav-equipped.unav-page-trainings > header.header .brand,
+body.unav-equipped.unav-page-teamlead > nav .brand{display:none!important}
+.unav-local-label{flex:0 0 auto;font:700 12px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#087f86;white-space:nowrap}
+body.unav-equipped.unav-page-teambuilding #site-breadcrumbs{background:#061f29;color:#d0e5e5;padding-bottom:8px}
+body.unav-equipped.unav-page-teambuilding #site-breadcrumbs a{color:#65d1d4!important}
+.unav-footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:9px 22px;max-width:1200px;margin:18px auto 0;padding:16px 20px 0;border-top:1px solid rgba(128,156,159,.3);font:600 13px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.unav-footer-links a{color:#087f86!important;text-decoration:none}
+.unav-footer-links a:hover{text-decoration:underline}
+@media(max-width:870px){
+#site-nav .unav-primary{gap:15px}
+#site-nav .unav-inner{gap:18px}
+#site-nav .unav-panel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#site-nav .unav-group:last-child{grid-column:span 2}
+}
+@media(max-width:700px){
+:root{--unav-height:60px}
+#site-nav .unav-inner{padding:0 15px}
+#site-nav .unav-primary{display:none}
+#site-nav .unav-brand{font-size:15px}
+#site-nav .unav-menu-button{margin-left:auto;min-height:38px;padding:8px 11px}
+#site-nav .unav-panel{right:10px;top:calc(100% + 6px);width:calc(100vw - 20px);max-height:calc(100dvh - var(--unav-height) - 18px);padding:18px 18px 20px;border-radius:14px}
+#site-nav .unav-panel-grid{grid-template-columns:1fr;gap:20px}
+#site-nav .unav-group:last-child{grid-column:auto}
+#site-nav .unav-panel-link{padding:8px 8px}
+#site-breadcrumbs{padding:9px 16px 0;font-size:11px}
+.unav-local-label{font-size:11px}
+}
+@media(max-width:420px){
+#site-nav .unav-button-label{font-size:12px}
+#site-nav .unav-brand{font-size:14px;gap:7px}
+#site-nav .unav-brand-mark{width:26px;height:26px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){#site-nav,#site-nav *{scroll-behavior:auto!important;transition:none!important}}
