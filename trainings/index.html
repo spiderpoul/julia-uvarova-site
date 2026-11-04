@@ -75,6 +75,20 @@
 .cta .selection-note{display:block;margin-top:14px;padding:11px 14px;background:rgba(255,255,255,.1);border-left:3px solid var(--orange);border-radius:7px;color:#fff;font-size:14px}
 .cta .selection-note[hidden]{display:none}
 @media(max-width:620px){.trainer-section{padding:30px 0 50px}.entry-card{min-height:0}.topic h3{font-size:22px}}
+
+/* Three immediately visible learning products */
+.entry-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.entry-card{min-height:375px;padding:27px 26px;border-radius:23px}
+.entry-card h2{font-size:clamp(24px,2.55vw,30px);letter-spacing:-.045em}
+.entry-card p{font-size:14px;line-height:1.56}
+.entry-card-teams{background:#eaf6f3;border:1px solid #b7d9d5}
+.entry-card-teams .entry-meta span{background:#fff;border-color:#c4dfda}
+.entry-card-teams .entry-kicker{color:#07636a}
+.entry-meta{margin:17px 0 22px}
+.entry-link{max-width:100%;text-align:center;font-size:13px;line-height:1.3}
+#teams,#advanced{scroll-margin-top:90px}
+@media(max-width:980px){.entry-cards{grid-template-columns:1fr 1fr}.entry-card-first{grid-column:1/-1;min-height:0}.entry-card{min-height:300px}}
+@media(max-width:620px){.entry-cards{grid-template-columns:1fr}.entry-card-first{grid-column:auto}.entry-card{min-height:0;padding:25px 23px}.entry-card h2{font-size:28px}.entry-card p{font-size:15px}.entry-link{width:100%;justify-content:center}}
 </style>
 <!-- Единая навигация по сайту -->
 <link rel="stylesheet" href="/assets/site-navigation.css">
@@ -93,26 +107,33 @@
   <div class="catalog-hero-intro">
     <div class="eyebrow">Корпоративное обучение · IT</div>
     <h1>Тренинги для <em>тимлидов и IT-команд</em></h1>
-    <p>Практические занятия по рабочим проблемам руководителей: делегирование, сложные сотрудники, конфликты и переговоры. Можно начать с одного тренинга или собрать программу обучения.</p>
+    <p>Три способа начать: один практический тренинг без подготовки, программы развития тимлидов или отдельные занятия для всей команды.</p>
   </div>
-  <div class="entry-cards" aria-label="Выберите формат обучения">
+  <div class="entry-cards" aria-label="Выберите подходящий формат обучения">
     <article class="entry-card entry-card-first">
-      <span class="entry-kicker">01 / Лучший способ начать</span>
+      <span class="entry-kicker">01 / Самый простой старт</span>
       <h2>Команда есть.<br>А всё снова на вас?</h2>
-      <p><strong>Самая простая точка входа, даже если вы пока не знаете, чему именно учить тимлидов.</strong></p>
-      <p>Не нужно заранее проводить диагностику команды, собирать кейсы и формулировать запрос. Участники разбирают свои рабочие ситуации и находят действия, которые смогут попробовать после занятия. Вы заодно увидите, какие темы стоит развивать дальше.</p>
-      <div class="entry-meta"><span>От 2 часов</span><span>Без подготовки кейсов</span><span>Для тимлидов с разным опытом</span></div>
-      <a class="entry-link" href="teamlead/">Программа и примеры ситуаций <span aria-hidden="true">↗</span></a>
+      <p><strong>Начните с этого тренинга, даже если пока не знаете, какие проблемы разбирать.</strong></p>
+      <p>Диагностика и подготовка кейсов не нужны. Разберём ситуации участников и найдём конкретные действия для работы.</p>
+      <div class="entry-meta"><span>От 2 часов</span><span>Без подготовки</span></div>
+      <a class="entry-link" href="teamlead/">Посмотреть первый тренинг <span aria-hidden="true">↗</span></a>
     </article>
     <article class="entry-card entry-card-program">
-      <span class="entry-kicker">02 / Системное обучение</span>
-      <h2>Программа развития тимлидов</h2>
-      <p>5 базовых и 5 углублённых тем. Можно пройти всю программу или выбрать занятия под конкретные задачи: от делегирования и 1:1 до конфликтов и переговоров.</p>
-      <div class="entry-meta"><span>5 базовых тем</span><span>5 углублённых тем</span><span>Каждое занятие — 3 часа</span></div>
-      <a class="entry-link" href="#basic">Посмотреть все темы <span aria-hidden="true">↓</span></a>
+      <span class="entry-kicker">02 / Для руководителей</span>
+      <h2>Две программы для тимлидов</h2>
+      <p>5 базовых и 5 углублённых занятий: делегирование, 1:1, управление нагрузкой, сложные сотрудники, переговоры и конфликты.</p>
+      <div class="entry-meta"><span>Начинающим</span><span>Опытным</span><span>По 3 часа</span></div>
+      <a class="entry-link" href="#basic">Выбрать тренинги для тимлидов <span aria-hidden="true">↓</span></a>
+    </article>
+    <article class="entry-card entry-card-teams">
+      <span class="entry-kicker">03 / Для всей IT-команды</span>
+      <h2>Командные тренинги и мастер-классы</h2>
+      <p>Работа с договорённостями, спорами, выгоранием и взаимодействием. Для разработчиков, тестировщиков, аналитиков и руководителей вместе.</p>
+      <div class="entry-meta"><span>4 темы</span><span>Отдельные занятия</span></div>
+      <a class="entry-link" href="#teams">Посмотреть командные тренинги <span aria-hidden="true">↓</span></a>
     </article>
   </div>
-  <div class="catalog-hero-note">Корпоративные группы 8–14 человек · очно и онлайн · примеры из IT-команд</div>
+  <div class="catalog-hero-note">Корпоративные группы · очно и онлайн · практические занятия на IT-примерах</div>
 </div></section>
 <section class="section trainer-section" id="trainer"><div class="wrap"><div class="about">
   <img src="teamlead/assets/image-01.jpg" width="1024" height="1536" loading="lazy" alt="Юлия Уварова — IT-психолог и тренер руководителей">
@@ -122,7 +143,7 @@
   <a class="text-link" href="../speaking/">Посмотреть выступления и записи ↗</a></div>
 </div></div></section>
 <section class="section section-alt" id="basic"><div class="wrap">
-<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 01 · первые пять занятий</div><h2>Тимлид: работа с людьми</h2><p>Для разработчиков, тестировщиков и других IT-специалистов, которые недавно стали руководителями. Пять практических занятий по задачам, с которыми сталкиваются в первые месяцы управления людьми.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
+<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 01 · первые пять занятий</div><h2>Тимлид: работа с людьми</h2><p>Пять разных навыков для повседневной работы руководителя: новая роль, делегирование, 1:1, обратная связь и приоритеты команды. Можно выбрать отдельные темы.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
 <div class="cards"><article class="topic" id="topic-01">
   <div class="topic-top"><span class="topic-number">01</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Первая управленческая роль</div><h3>Стали тимлидом. Что теперь ваша работа?</h3><p>Недавно стали руководителем бывших коллег, но продолжаете брать на себя технические задачи и не понимаете, за что теперь отвечаете лично.</p>
@@ -149,14 +170,14 @@
 </article>
 <article class="topic" id="topic-05">
   <div class="topic-top"><span class="topic-number">05</span><span class="topic-duration">3 часа</span></div>
-  <div class="topic-kicker">Разговоры с сопротивлением</div><h3>Неприятный разговор: как начать и довести до решения</h3><p>Сотрудник регулярно нарушает договорённости, спорит или обижается на замечания. Вы откладываете разговор, а проблема повторяется.</p>
-  <div class="outcome"><b>С чем выйдет участник</b><span>Подготовит и отрепетирует непростой разговор, включая ответы на возражения и чёткие договорённости в конце.</span></div>
-  <div class="topic-actions"><a class="text-link" href="#contact" data-training="Неприятный разговор: как начать и довести до решения">Обсудить этот тренинг ↗</a></div>
+  <div class="topic-kicker">Планирование и загрузка команды</div><h3>Все задачи срочные. Как выбрать главное для команды?</h3><p>У команды сразу несколько срочных задач, люди перегружены, а планы постоянно меняются. Как выбрать приоритеты и распределить работу без хаоса.</p>
+  <div class="outcome"><b>С чем выйдет участник</b><span>Расставит приоритеты на примере реального списка задач, оценит загрузку команды и определит, что делать сейчас, а что перенести.</span></div>
+  <div class="topic-actions"><a class="text-link" href="#contact" data-training="Все задачи срочные. Как выбрать главное для команды?">Обсудить этот тренинг ↗</a></div>
 </article></div>
 <div class="program-footer"><div><strong>Можно заказать всю программу или отдельную тему</strong><p>Между занятиями — небольшие задания на реальных рабочих ситуациях. На следующей встрече разбираем, что получилось.</p></div><a class="btn btn-orange" href="#contact" data-training="Базовая программа: 5 тренингов">Обсудить программу ↗</a></div>
 </div></section>
 <section class="section" id="advanced"><div class="wrap">
-<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 02 · ещё пять занятий</div><h2>Команда, которая справляется сама</h2><p>Для тимлидов с опытом и руководителей групп. Разбираем ситуации, в которых решения застревают на руководителе, сотрудники конфликтуют, сроки нереальны, а согласования затягиваются.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
+<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 02 · ещё пять занятий</div><h2>Команда, которая справляется сама</h2><p>Пять углублённых тем для руководителей с опытом: самостоятельность команды, сложные сотрудники, согласования, переговоры с заказчиком и конфликты.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
 <div class="cards"><article class="topic" id="topic-06">
   <div class="topic-top"><span class="topic-number">06</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Самостоятельность команды</div><h3>Все решения снова у тимлида. Как это изменить?</h3><p>Даже простые вопросы возвращаются к вам. Без вашего участия работа тормозится, а у вас не остаётся времени на свои задачи.</p>
@@ -177,9 +198,9 @@
 </article>
 <article class="topic" id="topic-09">
   <div class="topic-top"><span class="topic-number">09</span><span class="topic-duration">3 часа</span></div>
-  <div class="topic-kicker">Сроки, ресурсы, приоритеты</div><h3>Сроки нереальные, ресурсов не хватает. Как договориться?</h3><p>Заказчик просит быстрее, руководство не выделяет людей, а команда уже перегружена. Нужен разговор о том, что реально сделать.</p>
-  <div class="outcome"><b>С чем выйдет участник</b><span>Подготовит переговоры с вариантами решения: изменить срок, объём работ, приоритеты или ресурсы.</span></div>
-  <div class="topic-actions"><a class="text-link" href="#contact" data-training="Сроки нереальные, ресурсов не хватает. Как договориться?">Обсудить этот тренинг ↗</a></div>
+  <div class="topic-kicker">Переговоры с заказчиком и руководством</div><h3>Заказчик требует невозможного. Как договориться о сроках?</h3><p>Заказчик настаивает на быстром релизе, хотя команда оценивает работу иначе. Как обсуждать ограничения, объём задач и альтернативы без ссоры.</p>
+  <div class="outcome"><b>С чем выйдет участник</b><span>Подготовит разговор с заказчиком или руководителем: аргументы и варианты по срокам, объёму работ и ресурсам.</span></div>
+  <div class="topic-actions"><a class="text-link" href="#contact" data-training="Заказчик требует невозможного. Как договориться о сроках?">Обсудить этот тренинг ↗</a></div>
 </article>
 <article class="topic" id="topic-10">
   <div class="topic-top"><span class="topic-number">10</span><span class="topic-duration">3 часа</span></div>
@@ -190,7 +211,7 @@
 <div class="program-footer"><div><strong>Можно пройти 5 углублённых тем или все 10</strong><p>Полная программа: 30 часов практики, задания между встречами и разбор изменений в работе.</p></div><a class="btn btn-orange" href="#contact" data-training="Программа развития тимлидов: 5 или 10 тренингов">Запросить программу и стоимость ↗</a></div>
 </div></section>
 <section class="section section-alt" id="teams"><div class="wrap">
-<div class="section-head"><div class="eyebrow">Дополнительные тренинги для команд</div><h2>Когда обучать нужно всю команду</h2><p>Эти темы можно провести отдельно: вместе с разработчиками, тестировщиками, аналитиками, продуктом и руководителями.</p></div>
+<div class="section-head"><div class="eyebrow">Дополнительные тренинги для команд</div><h2>Когда обучать нужно всю команду</h2><p>Отдельные тренинги и мастер-классы для всей IT-команды: разработчиков, тестировщиков, аналитиков, продукта и руководителей. Можно заказать без программы обучения тимлидов.</p></div>
 <div class="more-grid">
 <article class="more"><span class="more-label">Командный тренинг · 3 часа</span><h3>Кто за что отвечает? Договариваемся о совместной работе</h3><p>Задачи застревают между ролями, решения требуют слишком многих согласований. На занятии участники составляют правила: кто решает, кого подключать и как фиксировать договорённости.</p><a class="text-link" href="#contact" data-training="Кто за что отвечает? Договариваемся о совместной работе">Обсудить тренинг ↗</a></article>
 <article class="more"><span class="more-label">Мастер-класс · 2–3 часа</span><h3>Дебаг выгорания: почему команда устала и что с этим делать</h3><p>Команда постоянно перегружена, люди раздражаются или теряют интерес. Учимся замечать признаки усталости, разбирать возможные причины и определять, что можно изменить в работе.</p><a class="text-link" href="#contact" data-training="Дебаг выгорания: почему команда устала и что с этим делать">Обсудить мастер-класс ↗</a></article>
@@ -209,7 +230,7 @@
 </div></section>
 
 <section class="section" id="contact"><div class="wrap"><div class="cta">
-<div><h2>Начнём с одной темы или составим программу для ваших тимлидов</h2><p>Напишите, сколько человек планируете обучать и какой формат удобен. Если пока не знаете, с чего начать, предложу первый тренинг без подготовки кейсов. Можно сразу запросить программу и стоимость.</p><p class="selection-note" id="selection-note" aria-live="polite" hidden></p></div>
+<div><h2>Обсудим тренинг для тимлидов или всей команды</h2><p>Напишите, кого хотите обучать и сколько участников будет в группе. Если пока не знаете, с чего начать, предложу первый тренинг без подготовки кейсов. Можно сразу запросить программу и стоимость.</p><p class="selection-note" id="selection-note" aria-live="polite" hidden></p></div>
 <div class="cta-actions"><a class="btn btn-orange" href="https://t.me/julia_uvarova_psy" target="_blank" rel="noopener noreferrer">Обсудить в Telegram ↗</a><a class="btn btn-white" id="email-request" href="mailto:julia.bazhura@yandex.ru?subject=%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%20%D0%B8%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C">Запросить программу и стоимость ↗</a></div>
 </div></div></section>
 </main>
