@@ -9,7 +9,11 @@
   "scripts": {
     "deploy": "node scripts/deploy-ftp.mjs",
     "deploy:dry-run": "node scripts/deploy-ftp.mjs --dry-run",
-    "test": "node --test"
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "build:check": "node scripts/build.mjs --check",
+    "predeploy": "npm run build",
+    "predeploy:dry-run": "npm run build"
   },
   "dependencies": {
     "basic-ftp": "^6.2.3"

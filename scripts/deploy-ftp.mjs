@@ -15,7 +15,7 @@ const STATIC_EXTENSIONS = new Set([
 const PRIVATE_DIRECTORIES = new Set([
   '.git', '.github', '.idea', '.vscode', '.venv', 'venv',
   'node_modules', '__pycache__', '.pytest_cache', 'scripts',
-  'tests', 'test', 'coverage',
+  'tests', 'test', 'coverage', 'src', 'docs',
 ]);
 const PRIVATE_FILENAMES = new Set([
   'agents.md', 'agent.md', 'readme.md', '.gitignore',
@@ -175,6 +175,8 @@ export async function main(args = process.argv.slice(2)) {
   if (args.some((arg) => arg !== '--dry-run')) {
     throw new Error('Поддерживается только аргумент --dry-run');
   }
+  const { build } = await import('./build.mjs');
+  await build();
   const files = await listSiteFiles(ROOT);
   if (files.length === 0) throw new Error('Нет файлов для публикации');
   if (args.includes('--dry-run')) {
