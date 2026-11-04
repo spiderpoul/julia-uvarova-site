@@ -89,6 +89,22 @@
 #teams,#advanced{scroll-margin-top:90px}
 @media(max-width:980px){.entry-cards{grid-template-columns:1fr 1fr}.entry-card-first{grid-column:1/-1;min-height:0}.entry-card{min-height:300px}}
 @media(max-width:620px){.entry-cards{grid-template-columns:1fr}.entry-card-first{grid-column:auto}.entry-card{min-height:0;padding:25px 23px}.entry-card h2{font-size:28px}.entry-card p{font-size:15px}.entry-link{width:100%;justify-content:center}}
+
+/* Public corporate training prices */
+.entry-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:3px 9px;margin:0 0 15px}
+.entry-price strong{font-size:clamp(23px,2.2vw,29px);font-weight:900;line-height:1.2;letter-spacing:-.035em;color:var(--petrol)}
+.entry-price span{font-size:12px;color:var(--muted)}
+.entry-card-first .entry-price strong{color:#fff}
+.entry-card-first .entry-price span{color:#dbf5f2}
+.entry-package-prices{font-size:13px;color:var(--muted);line-height:1.55;margin:-7px 0 19px}
+.entry-package-prices strong{color:var(--ink)}
+.program-prices{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;text-align:right}
+.program-prices>strong{font-weight:900;color:var(--petrol);font-size:17px}
+.program-prices>small{font-size:12px;color:var(--muted)}
+.more-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 8px;margin:-3px 0 15px;color:var(--petrol)}
+.more-price strong{font-size:20px;font-weight:900}
+.more-price span{font-size:12px;color:var(--muted)}
+@media(max-width:620px){.program-prices{align-items:flex-start;text-align:left;margin-top:15px;gap:5px}.entry-price strong{font-size:27px}}
 </style>
 <!-- Единая навигация по сайту -->
 <link rel="stylesheet" href="/assets/site-navigation.css">
@@ -115,7 +131,8 @@
       <h2>Команда есть.<br>А всё снова на вас?</h2>
       <p><strong>Начните с этого тренинга, даже если пока не знаете, какие проблемы разбирать.</strong></p>
       <p>Диагностика и подготовка кейсов не нужны. Разберём ситуации участников и найдём конкретные действия для работы.</p>
-      <div class="entry-meta"><span>От 2 часов</span><span>Без подготовки</span></div>
+      <div class="entry-meta"><span>2 часа</span><span>Без подготовки</span></div>
+      <div class="entry-price"><strong>30 000 ₽</strong><span>за всю группу · 2 часа</span></div>
       <a class="entry-link" href="teamlead/">Посмотреть первый тренинг <span aria-hidden="true">↗</span></a>
     </article>
     <article class="entry-card entry-card-program">
@@ -123,6 +140,8 @@
       <h2>Две программы для тимлидов</h2>
       <p>5 базовых и 5 углублённых занятий: делегирование, 1:1, управление нагрузкой, сложные сотрудники, переговоры и конфликты.</p>
       <div class="entry-meta"><span>Начинающим</span><span>Опытным</span><span>По 3 часа</span></div>
+      <div class="entry-price"><strong>50 000 ₽</strong><span>за отдельное занятие</span></div>
+      <div class="entry-package-prices">5 занятий — <strong>220 000 ₽</strong><br>10 занятий — <strong>420 000 ₽</strong></div>
       <a class="entry-link" href="#basic">Выбрать тренинги для тимлидов <span aria-hidden="true">↓</span></a>
     </article>
     <article class="entry-card entry-card-teams">
@@ -130,6 +149,7 @@
       <h2>Командные тренинги и мастер-классы</h2>
       <p>Работа с договорённостями, спорами, выгоранием и взаимодействием. Для разработчиков, тестировщиков, аналитиков и руководителей вместе.</p>
       <div class="entry-meta"><span>4 темы</span><span>Отдельные занятия</span></div>
+      <div class="entry-price"><strong>от 50 000 ₽</strong><span>за тематический тренинг</span></div>
       <a class="entry-link" href="#teams">Посмотреть командные тренинги <span aria-hidden="true">↓</span></a>
     </article>
   </div>
@@ -143,7 +163,7 @@
   <a class="text-link" href="../speaking/">Посмотреть выступления и записи ↗</a></div>
 </div></div></section>
 <section class="section section-alt" id="basic"><div class="wrap">
-<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 01 · первые пять занятий</div><h2>Тимлид: работа с людьми</h2><p>Пять разных навыков для повседневной работы руководителя: новая роль, делегирование, 1:1, обратная связь и приоритеты команды. Можно выбрать отдельные темы.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
+<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 01 · первые пять занятий</div><h2>Тимлид: работа с людьми</h2><p>Пять разных навыков для повседневной работы руководителя: новая роль, делегирование, 1:1, обратная связь и приоритеты команды. Можно выбрать отдельные темы.</p></div><div class="program-prices"><span class="program-meta">5 × 3 часа · 15 часов</span><strong>220 000 ₽ за программу</strong><small>Отдельный тренинг — 50 000 ₽</small></div></div>
 <div class="cards"><article class="topic" id="topic-01">
   <div class="topic-top"><span class="topic-number">01</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Первая управленческая роль</div><h3>Стали тимлидом. Что теперь ваша работа?</h3><p>Недавно стали руководителем бывших коллег, но продолжаете брать на себя технические задачи и не понимаете, за что теперь отвечаете лично.</p>
@@ -177,7 +197,7 @@
 <div class="program-footer"><div><strong>Можно заказать всю программу или отдельную тему</strong><p>Между занятиями — небольшие задания на реальных рабочих ситуациях. На следующей встрече разбираем, что получилось.</p></div><a class="btn btn-orange" href="#contact" data-training="Базовая программа: 5 тренингов">Обсудить программу ↗</a></div>
 </div></section>
 <section class="section" id="advanced"><div class="wrap">
-<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 02 · ещё пять занятий</div><h2>Команда, которая справляется сама</h2><p>Пять углублённых тем для руководителей с опытом: самостоятельность команды, сложные сотрудники, согласования, переговоры с заказчиком и конфликты.</p></div><span class="program-meta">5 × 3 часа · 15 часов</span></div>
+<div class="program-head"><div class="section-head" style="margin-bottom:0"><div class="eyebrow">Программа 02 · ещё пять занятий</div><h2>Команда, которая справляется сама</h2><p>Пять углублённых тем для руководителей с опытом: самостоятельность команды, сложные сотрудники, согласования, переговоры с заказчиком и конфликты.</p></div><div class="program-prices"><span class="program-meta">5 × 3 часа · 15 часов</span><strong>220 000 ₽ за 5 занятий</strong><small>Все 10 занятий — 420 000 ₽</small></div></div>
 <div class="cards"><article class="topic" id="topic-06">
   <div class="topic-top"><span class="topic-number">06</span><span class="topic-duration">3 часа</span></div>
   <div class="topic-kicker">Самостоятельность команды</div><h3>Все решения снова у тимлида. Как это изменить?</h3><p>Даже простые вопросы возвращаются к вам. Без вашего участия работа тормозится, а у вас не остаётся времени на свои задачи.</p>
@@ -208,15 +228,15 @@
   <div class="outcome"><b>С чем выйдет участник</b><span>Подготовит план отдельных и совместного разговоров, чтобы разобраться в причинах конфликта и договориться о дальнейшей работе.</span></div>
   <div class="topic-actions"><a class="text-link" href="#contact" data-training="Два сотрудника конфликтуют. Как вмешаться тимлиду?">Обсудить этот тренинг ↗</a></div>
 </article></div>
-<div class="program-footer"><div><strong>Можно пройти 5 углублённых тем или все 10</strong><p>Полная программа: 30 часов практики, задания между встречами и разбор изменений в работе.</p></div><a class="btn btn-orange" href="#contact" data-training="Программа развития тимлидов: 5 или 10 тренингов">Запросить программу и стоимость ↗</a></div>
+<div class="program-footer"><div><strong>Можно пройти 5 углублённых тем или все 10</strong><p>Полная программа: 30 часов практики, задания между встречами и разбор изменений в работе.</p></div><a class="btn btn-orange" href="#contact" data-training="Программа развития тимлидов: 5 или 10 тренингов">Обсудить программу и условия ↗</a></div>
 </div></section>
 <section class="section section-alt" id="teams"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Дополнительные тренинги для команд</div><h2>Когда обучать нужно всю команду</h2><p>Отдельные тренинги и мастер-классы для всей IT-команды: разработчиков, тестировщиков, аналитиков, продукта и руководителей. Можно заказать без программы обучения тимлидов.</p></div>
 <div class="more-grid">
-<article class="more"><span class="more-label">Командный тренинг · 3 часа</span><h3>Кто за что отвечает? Договариваемся о совместной работе</h3><p>Задачи застревают между ролями, решения требуют слишком многих согласований. На занятии участники составляют правила: кто решает, кого подключать и как фиксировать договорённости.</p><a class="text-link" href="#contact" data-training="Кто за что отвечает? Договариваемся о совместной работе">Обсудить тренинг ↗</a></article>
-<article class="more"><span class="more-label">Мастер-класс · 2–3 часа</span><h3>Дебаг выгорания: почему команда устала и что с этим делать</h3><p>Команда постоянно перегружена, люди раздражаются или теряют интерес. Учимся замечать признаки усталости, разбирать возможные причины и определять, что можно изменить в работе.</p><a class="text-link" href="#contact" data-training="Дебаг выгорания: почему команда устала и что с этим делать">Обсудить мастер-класс ↗</a></article>
-<article class="more"><span class="more-label">Командная практика · по согласованию</span><h3>Как ваша команда договаривается на самом деле</h3><p>Участники распределяют роли и принимают решения в игровой ситуации. После игры обсуждают, какие привычки взаимодействия помогают работе и какие мешают.</p><a class="text-link" href="../teambuilding/lord-of-the-ring/">Посмотреть тимбилдинг ↗</a></article>
-<article class="more"><span class="more-label">Для IT-команд · 3 часа</span><h3>«Спорим по делу»: как обсуждать разногласия</h3><p>Архитектура, качество, сроки, разные технические подходы. Участники тренируются обсуждать спорное решение: сравнивать критерии, отвечать на возражения и фиксировать итог.</p><a class="text-link" href="#contact" data-training="«Спорим по делу»: как обсуждать разногласия">Обсудить тренинг ↗</a></article>
+<article class="more"><span class="more-label">Командный тренинг · 3 часа</span><h3>Кто за что отвечает? Договариваемся о совместной работе</h3><p>Задачи застревают между ролями, решения требуют слишком многих согласований. На занятии участники составляют правила: кто решает, кого подключать и как фиксировать договорённости.</p><div class="more-price"><strong>50 000 ₽</strong><span>за группу · 3 часа</span></div><a class="text-link" href="#contact" data-training="Кто за что отвечает? Договариваемся о совместной работе">Обсудить тренинг ↗</a></article>
+<article class="more"><span class="more-label">Мастер-класс · 2–3 часа</span><h3>Дебаг выгорания: почему команда устала и что с этим делать</h3><p>Команда постоянно перегружена, люди раздражаются или теряют интерес. Учимся замечать признаки усталости, разбирать возможные причины и определять, что можно изменить в работе.</p><div class="more-price"><strong>от 50 000 ₽</strong><span>за мастер-класс · 2–3 часа</span></div><a class="text-link" href="#contact" data-training="Дебаг выгорания: почему команда устала и что с этим делать">Обсудить мастер-класс ↗</a></article>
+<article class="more"><span class="more-label">Командная практика · по согласованию</span><h3>Как ваша команда договаривается на самом деле</h3><p>Участники распределяют роли и принимают решения в игровой ситуации. После игры обсуждают, какие привычки взаимодействия помогают работе и какие мешают.</p><div class="more-price"><strong>от 65 000 ₽</strong><span>за игру · 2 часа · 5–30 участников</span></div><a class="text-link" href="../teambuilding/lord-of-the-ring/">Посмотреть тимбилдинг ↗</a></article>
+<article class="more"><span class="more-label">Для IT-команд · 3 часа</span><h3>«Спорим по делу»: как обсуждать разногласия</h3><p>Архитектура, качество, сроки, разные технические подходы. Участники тренируются обсуждать спорное решение: сравнивать критерии, отвечать на возражения и фиксировать итог.</p><div class="more-price"><strong>50 000 ₽</strong><span>за группу · 3 часа</span></div><a class="text-link" href="#contact" data-training="«Спорим по делу»: как обсуждать разногласия">Обсудить тренинг ↗</a></article>
 </div></div></section>
 <section class="section" id="format"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Как проходит обучение</div><h2>Готовые темы и практика на ваших ситуациях</h2><p>Содержание и упражнения подготовлены заранее. На первом тренинге участникам достаточно прийти со своими вопросами — предварительный анализ проблем команды от заказчика не требуется. Для длинной программы согласуем цели и примеры задач.</p></div>
@@ -226,12 +246,12 @@
 <div class="step"><small>03 / ТРЕНИНГ</small><b>Разбираем и пробуем</b><span>Короткие объяснения, упражнения и работа с конкретными ситуациями участников.</span></div>
 <div class="step"><small>04 / ПРИМЕНЕНИЕ</small><b>Пробуем в работе</b><span>Участники выбирают следующие действия. В длинной программе обсуждаем, что получилось, на последующих встречах.</span></div>
 </div>
-<p class="format-details"><strong>Для корпоративных групп 8–14 человек.</strong> Очно или онлайн. Длительность и состав программы согласуем заранее. Стоимость зависит от выбранного формата и количества занятий — её можно запросить вместе с программой.</p>
+<p class="format-details"><strong>Все цены — за корпоративную группу, не за одного участника.</strong> Обычно группа 8–14 человек, тимбилдинг — 5–30. В цену готового тренинга входят короткий предварительный созвон, подготовленные упражнения и проведение. Очно или онлайн; дополнительная адаптация, нестандартный состав группы и выездные расходы обсуждаются отдельно.</p>
 </div></section>
 
 <section class="section" id="contact"><div class="wrap"><div class="cta">
-<div><h2>Обсудим тренинг для тимлидов или всей команды</h2><p>Напишите, кого хотите обучать и сколько участников будет в группе. Если пока не знаете, с чего начать, предложу первый тренинг без подготовки кейсов. Можно сразу запросить программу и стоимость.</p><p class="selection-note" id="selection-note" aria-live="polite" hidden></p></div>
-<div class="cta-actions"><a class="btn btn-orange" href="https://t.me/julia_uvarova_psy" target="_blank" rel="noopener noreferrer">Обсудить в Telegram ↗</a><a class="btn btn-white" id="email-request" href="mailto:julia.bazhura@yandex.ru?subject=%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%20%D0%B8%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C">Запросить программу и стоимость ↗</a></div>
+<div><h2>Обсудим тренинг для тимлидов или всей команды</h2><p>Напишите, кого хотите обучать и сколько участников будет в группе. Если пока не знаете, с чего начать, предложу первый тренинг без подготовки кейсов. Цены указаны на странице; обсудим программу и условия проведения.</p><p class="selection-note" id="selection-note" aria-live="polite" hidden></p></div>
+<div class="cta-actions"><a class="btn btn-orange" href="https://t.me/julia_uvarova_psy" target="_blank" rel="noopener noreferrer">Обсудить в Telegram ↗</a><a class="btn btn-white" id="email-request" href="mailto:julia.bazhura@yandex.ru?subject=%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%20%D0%B8%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F">Получить программу и условия ↗</a></div>
 </div></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><span>© Юлия Уварова · Тренинги для IT-руководителей и команд</span><div class="footer-links"><a href="../">Главная</a><a href="teamlead/">«Всё снова на вас?»</a><a href="../books/">Книги</a><a href="../speaking/">Выступления</a></div></div></footer>
@@ -241,7 +261,7 @@ const selection=document.getElementById('selection-note'),email=document.getElem
 document.querySelectorAll('a[data-training]').forEach(link=>link.addEventListener('click',()=>{
  const training=link.getAttribute('data-training')||'тренинги для IT-команд';
  if(selection){selection.hidden=false;selection.textContent='Вы выбрали: '+training+'. Напишите название тренинга в Telegram или отправьте запрос по email.';}
- if(email){email.href='mailto:julia.bazhura@yandex.ru?subject='+encodeURIComponent('Программа и стоимость: '+training)+'&body='+encodeURIComponent('Здравствуйте, Юлия! Интересует обучение: '+training+'.\nКоличество участников: \nПредпочтительный формат: ');}
+ if(email){email.href='mailto:julia.bazhura@yandex.ru?subject='+encodeURIComponent('Программа и условия: '+training)+'&body='+encodeURIComponent('Здравствуйте, Юлия! Интересует обучение: '+training+'.\nКоличество участников: \nПредпочтительный формат: ');}
 }));})();
 </script>
 </body>
