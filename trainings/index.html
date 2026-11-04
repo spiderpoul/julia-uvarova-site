@@ -220,7 +220,7 @@ const selection=document.getElementById('selection-note'),email=document.getElem
 document.querySelectorAll('a[data-training]').forEach(link=>link.addEventListener('click',()=>{
  const training=link.getAttribute('data-training')||'тренинги для IT-команд';
  if(selection){selection.hidden=false;selection.textContent='Вы выбрали: '+training+'. Напишите название тренинга в Telegram или отправьте запрос по email.';}
- if(email){email.href='mailto:julia.bazhura@yandex.ru?subject='+encodeURIComponent('Программа и стоимость: '+training)+'&body='+encodeURIComponent('Здравствуйте, Юлия! Интересует обучение: '+training+'.\\nКоличество участников: \\nПредпочтительный формат: ');}
+ if(email){email.href='mailto:julia.bazhura@yandex.ru?subject='+encodeURIComponent('Программа и стоимость: '+training)+'&body='+encodeURIComponent('Здравствуйте, Юлия! Интересует обучение: '+training+'.\nКоличество участников: \nПредпочтительный формат: ');}
 }));})();
 </script>
 </body>
