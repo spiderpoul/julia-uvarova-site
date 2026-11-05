@@ -12,6 +12,7 @@ const STATIC_EXTENSIONS = new Set([
   '.woff2', '.ttf', '.otf', '.eot', '.pdf', '.mp3', '.wav', '.ogg',
   '.mp4', '.webm', '.vtt', '.wasm',
 ]);
+const SERVER_FILES = new Set(['master-klass-debug-vygoraniya/submit.php']);
 const PRIVATE_DIRECTORIES = new Set([
   '.git', '.github', '.idea', '.vscode', '.venv', 'venv',
   'node_modules', '__pycache__', '.pytest_cache', 'scripts',
@@ -66,7 +67,7 @@ export async function listSiteFiles(root = ROOT) {
       if (entry.isDirectory()) {
         await visit(join(directory, entry.name), path);
       } else if (entry.isFile() &&
-        (STATIC_EXTENSIONS.has(extname(entry.name).toLowerCase()) || entry.name === '.htaccess')) {
+        (STATIC_EXTENSIONS.has(extname(entry.name).toLowerCase()) || entry.name === '.htaccess' || SERVER_FILES.has(path))) {
         files.push(path);
       }
     }
